@@ -39,13 +39,42 @@ get_header();
   </div>  
   <?php } ?>
 
-    <div class="titlediv">
+    <div class="titlediv hidden-title">
       <h1 class="page-title"><span><?php the_title(); ?></span></h1>
     </div>
-  
-  <div class="entry-content">
-    <?php the_content(); ?>
-  </div>
+
+
+  <section class="intro">
+    <div class="wrapper">
+      <?php if (get_the_content()) { ?>
+      <div class="entry-content-default">
+        <?php the_content(); ?>
+      </div>
+      <?php } ?>
+
+      <?php 
+        $intro_text = get_field('intro_text');
+        $intro_image = get_field('intro_feat_image');
+        $intro_class = ($intro_text && $intro_image) ? "twocol":"onecol";
+        ?>
+        <?php if ($intro_text) { ?>
+        <div class="intro-content <?php echo $intro_class ?>">
+          <div class="col textcol">
+            <?php echo $intro_text ?>
+          </div>
+
+          <?php if ($intro_image) { ?>
+          <div class="col imagecol">
+            <figure>
+              <img src="<?php echo $intro_image['url'] ?>" alt="<?php echo $intro_image['title'] ?>">
+            </figure>
+          </div>  
+          <?php } ?>
+        </div>
+        <?php } ?>
+    </div>
+  </section>
+    
 </div>  
 
 <?php endwhile; ?>

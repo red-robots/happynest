@@ -1342,7 +1342,7 @@ button.swiper-pagination-bullet{border:0;margin:0;padding:0;-webkit-box-shadow:n
 div,h1,h2,h3,h4,h5,h6,p,li,a,span,strong{overflow-wrap:normal;word-wrap:normal;-ms-word-break:normal;word-break:normal;word-break:normal;-ms-hyphens:none;-webkit-hyphens:none;hyphens:none;page-break-inside:avoid}
 *{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box}
 a,input,button,textarea{-webkit-transition:all ease .3s;transition:all ease .3s}
-body{font-family:"Proxima Nova",sans-serif;font-size:14px;line-height:1.4}
+body{font-family:"Proxima Nova",sans-serif;font-size:18px;line-height:1.4}
 .skip-link{display:inline-block;text-decoration:none;padding:8px 15px;color:#fff;background:#000;border-radius:6px;position:absolute;top:-80vh;left:10px;-webkit-box-shadow:0 5px 16px rgba(0,0,0,.25);box-shadow:0 5px 16px rgba(0,0,0,.25);z-index:-999;opacity:0}
 .skip-link:focus{top:10px;z-index:9999;opacity:1}
 .site{position:relative;overflow-x:hidden;overflow-y:auto}
@@ -1380,7 +1380,17 @@ body{font-family:"Proxima Nova",sans-serif;font-size:14px;line-height:1.4}
 .links-with-icons .wrapper .link-icon .iconInner{display:inline-block;position:relative;padding-left:32px}
 .links-with-icons .wrapper .link-icon a{display:block;text-decoration:none;color:#fff}
 .links-with-icons .wrapper .link-icon i{display:inline-block;position:absolute;top:0;left:0;color:#000;font-size:23px;line-height:1}
+.hidden-title{width:0;height:0;overflow:hidden;text-indent:-999em;position:absolute;z-index:-999}
+.intro{background:#000;color:#fff}
+.intro-content{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;padding-top:70px;padding-bottom:70px}
+.intro-content .textcol{font-size:20px;line-height:1.5;width:100%}
+.intro-content .textcol h2{font-size:3em;font-weight:normal;line-height:1.2;margin:0 0 20px;color:#00b0fa}
+.intro-content .imagecol{width:100%;text-align:center}
+.intro-content .imagecol figure{display:inline-block;margin:0;max-width:500px;width:100%}
+.intro-content .imagecol figure img{width:100%;height:auto}
 @media(min-width:820px){.hero{height:700px}
+.intro-content .textcol{width:60%}
+.intro-content .imagecol{width:40%}
 }@media(print),(prefers-reduced-motion:reduce){.animated{-webkit-animation-duration:1ms !important;animation-duration:1ms !important;-webkit-transition-duration:1ms !important;transition-duration:1ms !important;-webkit-animation-iteration-count:1 !important;animation-iteration-count:1 !important}
 }@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}
 100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}

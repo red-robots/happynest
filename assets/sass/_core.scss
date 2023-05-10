@@ -20,7 +20,7 @@ a,input,button,textarea {
 }
 body {
   font-family: $font_primary;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.4;
 }
 .skip-link {
@@ -253,6 +253,60 @@ body {
         color: #000;
         font-size: 23px;
         line-height: 1;
+      }
+    }
+  }
+}
+
+.hidden-title {
+  width: 0;
+  height: 0;
+  overflow:hidden;
+  text-indent: -999em;
+  position: absolute;
+  z-index: -999;
+}
+
+.intro {
+  background: #000;
+  color: #FFF;
+}
+.intro-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  .textcol {
+    font-size: 20px;
+    line-height: 1.5;
+    width: 100%;
+    @include tab {
+      width: 60%;
+    }
+    h2 {
+      font-size: 3em;
+      font-weight: normal;
+      line-height: 1.2;
+      margin: 0 0 20px;
+      color: $color1; 
+    }
+  }
+  .imagecol {
+    width: 100%;
+    text-align: center;
+    @include tab {
+      width: 40%;
+    }
+    figure {
+      display: inline-block;
+      margin: 0 0;
+      max-width: 500px;
+      width: 100%;
+      img {
+        width: 100%;
+        height: auto;
       }
     }
   }
