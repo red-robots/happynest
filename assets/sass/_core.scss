@@ -1,0 +1,259 @@
+div,h1,h2,h3,h4,h5,h6,p,li,a,span,strong {
+	overflow-wrap: normal;
+	word-wrap: normal;
+	-ms-word-break: normal;
+	word-break: normal;
+	word-break: normal;
+	-ms-hyphens: none;
+	-moz-hyphens: none;
+	-webkit-hyphens: none;
+	hyphens: none;
+	page-break-inside: avoid;
+}
+* {
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+a,input,button,textarea {
+  transition: all ease .3s;
+}
+body {
+  font-family: $font_primary;
+  font-size: 14px;
+  line-height: 1.4;
+}
+.skip-link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 8px 15px;
+  color: #FFF;
+  background: #000;
+  border-radius: 6px;
+  position: absolute;
+  top: -80vh;
+  left: 10px;
+  box-shadow: 0 5px 16px rgba(0,0,0,0.25);
+  z-index: -999;
+  opacity: 0;
+  &:focus {
+    top: 10px;
+    z-index: 9999;
+    opacity: 1;
+  }
+}
+
+.site {
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.wrapper {
+  max-width: $wrapper;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.site-header {
+  background: #000;
+  .head-inner {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .site-logo {
+    display: inline-block;
+    width: 200px;
+    img {
+      display: inline-block;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.main-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  ul {
+    margin: 0 0;
+    padding: 0 0;
+    list-style: none;
+  }
+  ul.menu > li {
+    float: left;
+  }
+  ul.menu a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 1.2;
+    color: #FFF;
+  }
+  ul.menu > li > a {
+    padding: 30px 25px;
+  }
+  ul.menu > li:hover > a {
+    color: $color1;
+  }
+}
+
+.menu-toggle {
+  display: none;
+}
+
+.topCta {
+  margin-left: 18px;
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 500px;
+  color: #000;
+  padding: 5px 25px;
+  color: #FFF;
+  @include blueGradient();
+  &:hover {
+    color: #FFF;
+    text-decoration: none;
+    background: linear-gradient(to right, #02efe7 0%,#01cdf9 100%);
+  }
+}
+
+.hero {
+  height: 400px;
+  @include tab {
+    height: 700px;
+  }
+  .swiper-wrapper,
+  .swiper-slide {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide {
+    position: relative;
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .swiper-pagination-bullet {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+    color: #000;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .swiper-pagination-bullet-active {
+    color: #fff;
+    background: #007aff;
+  }
+
+  .hero-text {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .inner {
+      max-width: $wrapper;
+      width: 100%;
+      margin: 0 auto;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    &:before {
+      content:"";
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #FFF;
+      opacity: 0.6;
+    }
+  }
+  .buttondiv {
+    margin-top: 20px;
+  }
+
+  h2 {
+    font-size: 5em;
+    font-weight: bold;
+    line-height: 1.2;
+    margin: 0 0;
+    em {
+      font-weight: bold;
+      color: $color1;
+    }
+  }
+}
+
+.links-with-icons {
+  @include blueGradient();
+  .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    .link-icon {
+      width: 33.333%;
+      font-size: 1.5em;
+      line-height: 1.2;
+      color: #FFF;
+      text-align: center;
+      padding: 30px;
+      .iconInner {
+        display: inline-block;
+        position: relative;
+        padding-left: 32px;
+      }
+      a {
+        display: block;
+        text-decoration: none;
+        color: #FFF;
+      }
+      i {
+        display: inline-block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: #000;
+        font-size: 23px;
+        line-height: 1;
+      }
+    }
+  }
+}
