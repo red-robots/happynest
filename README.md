@@ -1,5 +1,5 @@
 =======
-# CHARTER PROPERTIES INC.
+# HAPPY NEST
 WordPress Theme
 
 * Developer: Lisa DeBona
