@@ -53,29 +53,179 @@ get_header();
       <?php } ?>
 
       <?php 
-        $intro_text = get_field('intro_text');
-        $intro_image = get_field('intro_feat_image');
-        $intro_class = ($intro_text && $intro_image) ? "twocol":"onecol";
-        ?>
-        <?php if ($intro_text) { ?>
-        <div class="intro-content <?php echo $intro_class ?>">
-          <div class="col textcol">
-            <?php echo $intro_text ?>
-          </div>
+      $intro_columns = get_field('intro_columns');
+      $intro_text = get_field('intro_text');
+      $intro_image = get_field('intro_feat_image');
+      $intro_class = ($intro_text && $intro_image) ? "twocol":"onecol";
+      ?>
+      <?php if ($intro_text) { ?>
+      <div class="intro-content <?php echo $intro_class ?>">
+        <div class="col textcol">
+          <?php echo $intro_text ?>
+        </div>
 
-          <?php if ($intro_image) { ?>
-          <div class="col imagecol">
-            <figure>
-              <img src="<?php echo $intro_image['url'] ?>" alt="<?php echo $intro_image['title'] ?>">
-            </figure>
-          </div>  
+        <?php if ($intro_image) { ?>
+        <div class="col imagecol">
+          <figure>
+            <img src="<?php echo $intro_image['url'] ?>" alt="<?php echo $intro_image['title'] ?>">
+          </figure>
+        </div>  
+        <?php } ?>
+      </div>
+      <?php } ?>
+    </div>
+  </section>      
+
+
+  <?php  
+    $columnButton = get_field('intro_column_button');
+    $colTarget = (isset($columnButton['target']) && $columnButton['target']) ? $columnButton['target'] : "_self";
+    $colText = (isset($columnButton['title']) && $columnButton['title']) ? $columnButton['title'] : "";
+    $colLink = (isset($columnButton['url']) && $columnButton['url']) ? $columnButton['url'] : "";
+  ?>
+
+  <?php if ($intro_columns) { ?>
+  <section class="section section-1 intro-columns columns-wrapper">
+    <div class="wrapper">
+      <div class="flexwrap">
+      <?php foreach ($intro_columns as $col) { ?>
+        <?php if ($col['content']) { ?>
+          <div class="fcol">
+            <div class="inner"><?php echo $col['content'] ?></div>
+          </div>
+        <?php } ?>
+      <?php } ?>
+      </div>
+
+      <?php if ($colText && $colLink) { ?>
+      <div class="buttondiv">
+        <a href="<?php echo $colLink ?>" target="<?php echo $colTarget ?>" class="button"><?php echo $colText ?></a>
+      </div>
+      <?php } ?>
+      </div>
+  </section>
+  <?php } ?>
+
+
+  <?php  
+  $section2_image = get_field('section2_image');
+  $section2_button = get_field('section2_button');
+  $section2_content = get_field('section2_content');
+  $section2_class = ($section2_image && $section2_content) ? "twocol" : "onecol";
+
+  $s2Target = (isset($section2_button['target']) && $section2_button['target']) ? $section2_button['target'] : "_self";
+  $s2Text = (isset($section2_button['title']) && $section2_button['title']) ? $section2_button['title'] : "";
+  $s2Link = (isset($section2_button['url']) && $section2_button['url']) ? $section2_button['url'] : "";
+
+  if($section2_image || $section2_content) { ?>
+  <section class="section section-2 <?php echo $section2_class ?>">
+    <div class="flexwrap">
+      <?php if ($section2_image) { ?>
+      <figure class="fcol imagecol">
+        <img src="<?php echo $section2_image['url'] ?>" alt="<?php echo $section2_image['title'] ?>" />
+      </figure>  
+      <?php } ?>
+
+      <?php if ($section2_content) { ?>
+      <div class="fcol textcol">
+        <div class="inner">
+          <div class="text"><?php echo $section2_content ?></div>
+          <?php if ($s2Text && $s2Link) { ?>
+          <div class="buttondiv">
+            <a href="<?php echo $s2Link ?>" target="<?php echo $s2Target ?>" class="button"><?php echo $s2Text ?></a>
+          </div>
           <?php } ?>
         </div>
-        <?php } ?>
+      </div>  
+      <?php } ?>
     </div>
   </section>
-    
-</div>  
+  <?php } ?>
+
+
+  <?php
+  $section3_title = get_field('section3_title');
+  $section3_stats = get_field('section3_stats');
+  if($section3_title || $section3_stats) { ?>
+  <section class="section section-3">
+    <div class="wrapper">
+      <?php if ($section3_title) { ?>
+        <h2 class="stitle"><?php echo $section3_title ?></h2>
+      <?php } ?>
+      <?php if ($section3_stats) { ?>
+        <div class="status">
+          <div class="inner">
+          <?php foreach ($section3_stats as $s) { ?>
+            
+            <?php if ( $s['percent'] ) { ?>
+            <div class="stat">
+              <span class="percent"><?php echo $s['percent'] ?></span>
+              <?php if ( $s['title'] ) { ?>
+              <span class="title"><?php echo $s['title'] ?></span>
+              <?php } ?>
+            </div>
+            <?php } ?>
+
+          <?php } ?>
+          </div>
+        </div>
+      <?php } ?>
+    </div>
+  </section>
+  <?php } ?>
+
+
+  <?php
+  $section4_content = get_field('section4_content');
+  $section4_image = get_field('section4_image');
+  $section4_class = ($section4_content && $section4_image) ? "twocol" : "onecol";
+  if($section4_content || $section4_image) { ?>
+  <section class="section section-4 <?php echo $section4_class ?>">
+    <div class="wrapper-fullwidth">
+      <div class="flexwrap">
+        <?php if ($section4_content) { ?>
+        <div class="fcol textcol">
+          <div class="inner">
+            <div class="text"><?php echo $section4_content ?></div>
+          </div>
+        </div>  
+        <?php } ?>
+
+        <?php if ($section4_image) { ?>
+        <figure class="fcol imagecol" style="background-image:url('<?php echo $section4_image['url'] ?>')">
+        </figure>  
+        <?php } ?>
+      </div>
+    </div>
+  </section>
+  <?php } ?>
+
+
+  <?php  
+  $section5_content = get_field('section5_content');
+  $section5_button = get_field('section5_button');
+  $s5Target = (isset($section5_button['target']) && $section5_button['target']) ? $section5_button['target'] : "_self";
+  $s5Text = (isset($section5_button['title']) && $section5_button['title']) ? $section5_button['title'] : "";
+  $s5Link = (isset($section5_button['url']) && $section5_button['url']) ? $section5_button['url'] : "";
+
+  if($section5_content) { ?>
+  <section class="section section-5">
+    <div class="wrapper">
+      <div class="flexwrap">
+        <div class="fcol textcol">
+          <div class="inner">
+            <div class="text"><?php echo $section5_content ?></div>
+            <?php if ($s5Text && $s5Link) { ?>
+            <div class="buttondiv">
+              <a href="<?php echo $s5Link ?>" target="<?php echo $s5Target ?>" class="button"><?php echo $s5Text ?></a>
+            </div>
+            <?php } ?>
+          </div>
+        </div>  
+      </div>
+    </div>
+  </section>
+  <?php } ?>
 
 <?php endwhile; ?>
 

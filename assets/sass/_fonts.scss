@@ -2,8 +2,8 @@
   font-family: 'Proxima Nova';
   src: url('./fonts/proxima-nova-regular.eot');
   src: url('./fonts/proxima-nova-regular.eot?#iefix') format('embedded-opentype'),
-       url('./fonts/proxima/proxima_nova_black.woff') format('woff'),
-       url('./fonts/proxima/proxima_nova_black.ttf') format('truetype');
+       url('./fonts/proxima-nova-regular.woff') format('woff'),
+       url('./fonts/proxima-nova-regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -27,6 +27,24 @@
 }
 @font-face {
   font-family: 'Proxima Nova';
+  src: url('./fonts/proxima-nova-semibold.eot');
+  src: url('./fonts/proxima-nova-semibold.eot?#iefix') format('embedded-opentype'),
+       url('./fonts/proxima-nova-semibold.woff') format('woff'),
+       url('./fonts/proxima-nova-semibold.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('./fonts/proxima-nova-semibold-italic.eot');
+  src: url('./fonts/proxima-nova-semibold-italic.eot?#iefix') format('embedded-opentype'),
+       url('./fonts/proxima-nova-semibold-italic.woff') format('woff'),
+       url('./fonts/proxima-nova-semibold-italic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Proxima Nova';
   src: url('./fonts/proxima-nova-bold-italic.eot');
   src: url('./fonts/proxima-nova-bold-italic.eot?#iefix') format('embedded-opentype'),
        url('./fonts/proxima-nova-bold-italic.woff') format('woff'),
@@ -34,7 +52,6 @@
   font-weight: bold;
   font-style: italic;
 }
-
 
 
 @font-face {

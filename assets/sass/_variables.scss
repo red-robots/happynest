@@ -173,6 +173,14 @@ $wrapper: 1300px;
   background: linear-gradient(to right, #028ae7 0%,#01cdf9 100%);
 }
 
+@mixin greenBlueGradient() {
+  background: #00ffb3;
+  background: -moz-linear-gradient(left,  #00ffb3 0%, #00b0fa 100%);
+  background: -webkit-linear-gradient(left,  #00ffb3 0%,#00b0fa 100%);
+  background: linear-gradient(to right,  #00ffb3 0%,#00b0fa 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffb3', endColorstr='#00b0fa',GradientType=1 );
+}
+
 @mixin broken_lines_dark() {
 	background-image: url("data:image/svg+xml,%3csvg width='100%30' height='100%30' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%30' height='100%30' fill='none' stroke='%23333' stroke-width='3' stroke-dasharray='5%2c10' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
 }
