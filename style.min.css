@@ -1472,7 +1472,7 @@ body{font-family:"Proxima Nova",sans-serif;font-size:18px;line-height:1.4}
 .footerNav ul.menu a{display:inline-block;text-decoration:none;color:#fff;opacity:.8}
 .footerNav ul.menu a:hover{opacity:1;color:#02dcff}
 .footerNav ul.menu ul{display:none}
-.footerNav ul.menu li{min-height:28px;margin:5px 0}
+.footerNav ul.menu li{min-height:28px;margin:0 0 8px}
 @media(min-width:820px){.hero{height:700px}
 .intro-content .textcol{width:60%}
 .intro-content .imagecol{width:40%}
