@@ -113,3 +113,41 @@ function format_phone_number($string) {
     return $append.$string;
 }
 
+function get_social_media() {
+    $options = get_field("social_media_links","option");
+    $icons = social_icons();
+    $list = array();
+    if($options) {
+        foreach($options as $i=>$opt) {
+            if( isset($opt['link']) && $opt['link'] ) {
+                $url = $opt['link'];
+                $parts = parse_url($url);
+                $host = ( isset($parts['host']) && $parts['host'] ) ? $parts['host'] : '';
+                if($host) {
+                    foreach($icons as $type=>$icon) {
+                        if (strpos($host, $type) !== false) {
+                            $list[$i] = array('url'=>$url,'icon'=>$icon,'type'=>$type);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    return ($list) ? $list : '';
+}
+
+
+function social_icons() {
+    $social_types = array(
+        'facebook'  => 'fab fa-facebook-square',
+        'twitter'   => 'fab fa-twitter',
+        'linkedin'  => 'fab fa-linkedin',
+        'instagram' => 'fab fa-instagram',
+        'youtube'   => 'fab fa-youtube',
+        'vimeo'  => 'fab fa-vimeo',
+    );
+    return $social_types;
+}
+
+

@@ -19,9 +19,9 @@ function remove_wp_logo( $wp_admin_bar ) {
 function my_login_logo() { 
   $custom_logo_id = get_theme_mod( 'custom_logo' );
   $logoImg = wp_get_attachment_image_src($custom_logo_id,'large');
-  $logo_url = ($logoImg) ? $logoImg[0] : '';
-  if($custom_logo_id) { ?>
+  $logo_url = ($logoImg) ? $logoImg[0] : ''; ?>
   <style type="text/css">
+    <?php if($custom_logo_id) { ?>
     body.login div#login h1 a {
       background-image: url(<?php echo $logo_url; ?>);
       background-size: contain;
@@ -29,12 +29,31 @@ function my_login_logo() {
       height: 100px;
       margin-bottom: 10px;
     }
+    <?php } ?>
+    html {
+      background-color: #01ccf8;
+    }
+    body.login {
+      background: linear-gradient(to bottom, #025890 0%,#1163ba 0%,#01cdf9 100%);
+    }
+    body.login form {
+      border: none;
+      border-radius: 8px;
+    }
     .login #backtoblog, .login #nav {
       text-align: center;
     }
-
+    .login #backtoblog a,
+    .login #nav a {
+      color: #eef9fd!important;
+      transition: all ease .3s;
+    }
+    .login #backtoblog a:hover,
+    .login #nav a:hover {
+      opacity: 0.5;
+    }
   </style>
-<?php }
+<?php
 }
 add_action( 'login_enqueue_scripts', 'my_login_logo' );
 

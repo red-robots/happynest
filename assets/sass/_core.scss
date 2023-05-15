@@ -130,6 +130,13 @@ body {
     text-decoration: none;
     background: linear-gradient(to right, #02efe7 0%,#01cdf9 100%);
   }
+  &.black {
+    background: #000;
+    color: #FFF;
+    &:hover {
+      background: linear-gradient(to right, #02efe7 0%,#01cdf9 100%);
+    }
+  }
 }
 
 .hero {
@@ -290,9 +297,6 @@ body {
       width: 60%;
     }
     h2 {
-      font-size: 50px;
-      font-weight: 500;
-      line-height: 1.2;
       margin: 0 0 20px;
       color: $color1; 
     }
@@ -350,11 +354,18 @@ body {
   }
 }
 
+.section h2 {
+  font-size: 50px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+
 .section-1 {
   background: #000;
 }
 .section-2 {
   position: relative;
+  padding-bottom: 40px;
   &:before {
     content:"";
     display: block;
@@ -540,13 +551,211 @@ body {
     color: #000;
   }
   h2 {
-    font-size: 50px;
-    font-weight: 500;
-    line-height: 1.1;
     margin: 0 0 20px;
     color: $color1;
   }
   .buttondiv {
     margin-top: 40px;
+  }
+}
+
+.gblue {
+  @include blueGradient();
+}
+
+.button-center {
+  text-align: center;
+  .button {
+    display: inline-block;
+  }
+}
+
+.section.gblue {
+  .stitle {
+    text-align: center;
+    color: #FFF;
+    margin: 0 0 20px;
+  }
+}
+.section-6 {
+  padding-bottom: 100px;
+  .wrapper {
+    max-width: 100%;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    position: relative;
+    @include tab {
+      max-width: 98%;
+      padding-left: 5vw;
+      padding-right: 5vw;
+    }
+  }
+  .flexwrap {
+    justify-content: center;
+  }
+  .steps {
+    margin-top: 130px;
+  }
+  .step {
+    width: 33.333%;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    padding: 50px 30px;
+    position: relative;
+    &:before {
+      content:attr(data-counter);
+      display: block;
+      font-family: $font_primary;
+      font-size: 23rem;
+      font-weight: 600;
+      line-height: 1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      color: #fff;
+      transform: translateX(-50%) translateY(-50%);
+      opacity: 0.25;
+    }
+    div {
+      position: relative;
+      z-index: 5;
+    }
+    .icondiv {
+      font-size: 2.3em;
+      line-height: 1;
+    }
+  }
+  .steps-wrapper {
+    padding-right: 440px;
+  }
+  .buttondiv {
+    margin-top: 60px;
+    position: relative;
+    z-index: 10;
+  }
+  .imageblock {
+    margin: 0 0;
+    max-width: 570px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: 80px;
+    transform: translateY(-50%);
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+
+/* FOOTER */
+.site-footer {
+  background: #000;
+  color: #FFF;
+  border-top: 2px solid #FFF;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  .flexwrap {
+    justify-content: space-between;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  .footLogo {
+    margin: 0 0;
+    img {
+      width: 200px;
+      height: auto;
+    }
+  }
+  .footCol {
+    padding: 0 20px;
+    width: 100%;
+    @include tab {
+      width: 20%;
+      &.footLogo {
+        width: 20%;
+      }
+      &.footerNav {
+        width: 40%;
+      }
+      &.appInfo {
+        width: 20%;
+      }
+    }
+  }
+
+  .appInfo {
+    .wtitle {
+      opacity: 0.8;
+      margin-bottom: 8px;
+    }
+  }
+
+  .socialMediaLinks {
+    a {
+      display: inline-block;
+      color: #FFF;
+      font-size: 1.5em;
+      line-height: 1;
+      margin: 5px 8px;
+      &:hover {
+        color: $color1;
+      }
+    }
+  }
+}
+
+.app-button {
+  display: inline-block;
+  text-decoration: none;
+  width: 120px;
+  height: 40px;
+  border-radius: 6px;
+  background-color: #464646;
+  background-size: 75%;
+  background-repeat: no-repeat;
+  background-position: center;
+  &.apple {
+    background-image: url('./images/icon-apple-store-white.png');
+  }
+  &.google {
+    background-image: url('./images/icon-google-play-white.png');
+  }
+  &:hover {
+    background-color: $color1;
+  }
+} 
+
+.appInfo {
+  .app-button {
+    margin-bottom: 5px;
+  }
+}
+
+.footerNav {
+  ul.menu {
+    margin: 0 0;
+    padding: 0 0;
+    list-style: none;
+    column-count: 2;
+    a {
+      display: inline-block;
+      text-decoration: none;
+      color: #FFF;
+      opacity: 0.8;
+      &:hover {
+        opacity: 1;
+        color: $color2;
+      }
+    }
+    ul {
+      display: none;
+    }
+    li {
+      min-height: 28px;
+      margin: 5px 0;
+    }
   }
 }
