@@ -1485,7 +1485,7 @@ body{font-family:"Proxima Nova",sans-serif;font-size:18px;line-height:1.4}
 .section-6 .wrapper{max-width:98%;padding-left:5vw;padding-right:5vw}
 .site-footer .footCol{width:20%}
 .site-footer .footCol.footLogo{width:20%}
-.site-footer .footCol.footerNav{width:40%}
+.site-footer .footCol.footerNav{width:40%;padding-left:4vw}
 .site-footer .footCol.appInfo{width:20%}
 }@media(print),(prefers-reduced-motion:reduce){.animated{-webkit-animation-duration:1ms !important;animation-duration:1ms !important;-webkit-transition-duration:1ms !important;transition-duration:1ms !important;-webkit-animation-iteration-count:1 !important;animation-iteration-count:1 !important}
 }@-webkit-keyframes fa-spin{0%{-webkit-transform:rotate(0);transform:rotate(0)}
