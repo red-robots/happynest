@@ -27,4 +27,9 @@ jQuery(document).ready(function ($) {
       prevEl: ".swiper-button-prev"
     }
   });
+  $('#menu-toggle').on('click', function (e) {
+    e.preventDefault();
+    $(this).toggleClass('active');
+    $('body').toggleClass('menu-open');
+  });
 });

@@ -26,4 +26,10 @@ jQuery(document).ready(function ($) {
     },
   });
 
+  $('#menu-toggle').on('click', function(e){
+    e.preventDefault();
+    $(this).toggleClass('active');
+    $('body').toggleClass('menu-open');
+  });
+
 }); 
