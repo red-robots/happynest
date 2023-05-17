@@ -1366,10 +1366,10 @@ body{font-family:"Proxima Nova",sans-serif;font-size:18px;line-height:1.4}
 .main-navigation ul.menu>li.current-menu-item>a,.main-navigation ul.menu>li.current_page_item>a,.main-navigation ul.menu>li:hover>a{color:#00b0fa}
 .menu-toggle{display:none}
 .topCta{margin-left:18px}
-.button{display:inline-block;text-decoration:none;border-radius:500px;color:#000;padding:5px 25px;color:#fff;background:-webkit-gradient(linear,left top,right top,from(#028ae7),to(#01cdf9));background:linear-gradient(to right,#028ae7 0,#01cdf9 100%)}
-.button:hover{color:#fff;text-decoration:none;background:-webkit-gradient(linear,left top,right top,from(#02efe7),to(#01cdf9));background:linear-gradient(to right,#02efe7 0,#01cdf9 100%)}
+.button{display:inline-block;text-decoration:none;border-radius:500px;color:#000;padding:5px 25px;color:#fff;-webkit-transition:.5s;transition:.5s;background:-webkit-gradient(linear,left top,right top,from(#0686dd),color-stop(#01c2f9),color-stop(#02efe7),to(#01cdf9));background:linear-gradient(90deg,#0686dd,#01c2f9,#02efe7,#01cdf9);background-size:400%}
+.button:hover{color:#fff;text-decoration:none;background-position:right center}
 .button.black{background:#000;color:#fff}
-.button.black:hover{background:-webkit-gradient(linear,left top,right top,from(#02efe7),to(#01cdf9));background:linear-gradient(to right,#02efe7 0,#01cdf9 100%)}
+.button.black:hover{-webkit-transition:.7s;transition:.7s;background:-webkit-gradient(linear,left top,right top,from(#0686dd),color-stop(#01c2f9),color-stop(#02efe7),to(#01cdf9));background:linear-gradient(90deg,#0686dd,#01c2f9,#02efe7,#01cdf9);background-position:right center;background-size:400%}
 .hero{height:400px}
 .hero .swiper-wrapper,.hero .swiper-slide{width:100%;height:100%}
 .hero .swiper-slide{position:relative}
@@ -2009,4 +2009,8 @@ to{visibility:hidden;-webkit-transform:translate3d(0,-100%,0);transform:translat
 100%{opacity:0}
 }@-webkit-keyframes swiper-preloader-spin{100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}
 }@keyframes swiper-preloader-spin{100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}
+}@-webkit-keyframes animateBgColor{0%{background-position:0 0}
+100%{background-position:160%}
+}@keyframes animateBgColor{0%{background-position:0 0}
+100%{background-position:160%}
 }
