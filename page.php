@@ -26,10 +26,33 @@ get_header();
         <h1 class="page-title"><span><?php the_title(); ?></span></h1>
       </div>
       <?php } ?>
+
+      <?php if (get_the_content()) { ?>
+      <div class="entry-content">
+        <?php the_content(); ?>
+      </div>
+      <?php } ?>
 		
-    <div class="entry-content">
-      <?php the_content(); ?>
-    </div>
+      <?php  
+      /* SECTION 1 */
+      $section1_text = get_field('section1_text');
+      $section1_icon = get_field('section1_icon');
+      if($section1_text) { ?>
+      <section class="section section1">
+        <div class="wrapper">
+          <div class="text-center">
+            <?php if ($section1_icon) { ?>
+            <figure class="topIcon">
+              <img src="<?php echo $section1_icon['url'] ?>" alt="" />
+            </figure>  
+            <?php } ?>
+            <div class="textwrap">
+              <?php echo $section1_text ?>
+            </div>
+          </div>
+        </div>
+      </section>
+      <?php } ?>
 
 	<?php endwhile; ?>
 </div><!-- #primary -->
