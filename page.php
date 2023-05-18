@@ -54,6 +54,27 @@ get_header();
       </section>
       <?php } ?>
 
+
+
+      <?php  
+      /* SECTION 2 */
+      $section2_text = get_field('section2_text');
+      $section2_img = get_field('section2_img');
+      if($section2_text) { ?>
+      <section class="section section2">
+        <div class="wrapper">
+          <div class="text-center">
+            <div class="textwrap">
+              <?php echo $section2_text ?>
+            </div>
+          </div>
+        </div>
+        <?php if ($section2_img) { ?>
+        <div class="sectionBg" style="background-image:url('<?php echo $section2_img['url'] ?>');"></div>  
+        <?php } ?>
+      </section>
+      <?php } ?>
+
 	<?php endwhile; ?>
 </div><!-- #primary -->
 
