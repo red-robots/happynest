@@ -13,28 +13,25 @@
  */
 $post_type = get_post_type();
 $show_title = ($post_type=='tribe_events') ? false : true;
-get_header(); ?>
+$bannerImage = get_field('banner_image');
+$hasBanner = ( isset($bannerImage['image1']) && $bannerImage['image1'] ) ? 'hasBanner' : 'noBanner';
+get_header(); 
+?>
 
-<div id="primary" class="content-area-full generic-layout">
-	<main id="main" class="site-main" role="main">
+<div id="primary" class="content-area-full internalPage generic-layout <?php echo $hasBanner ?>">
+	<?php while ( have_posts() ) : the_post(); ?>
 
-    <div class="wrapper">
-		<?php while ( have_posts() ) : the_post(); ?>
-
-        <?php if ($show_title) { ?>
-        <div class="titlediv typical">
-          <h1 class="page-title"><span><?php the_title(); ?></span></h1>
-        </div>
-        <?php } ?>
-			
-      <div class="entry-content">
-        <?php the_content(); ?>
+      <?php if ($hasBanner=="noBanner") { ?>
+      <div class="titlediv typical">
+        <h1 class="page-title"><span><?php the_title(); ?></span></h1>
       </div>
-    </div>  
+      <?php } ?>
+		
+    <div class="entry-content">
+      <?php the_content(); ?>
+    </div>
 
-		<?php endwhile; ?>
-
-	</main><!-- #main -->
+	<?php endwhile; ?>
 </div><!-- #primary -->
 
 <?php
