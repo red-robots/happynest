@@ -1155,12 +1155,12 @@ body.subpage {
   }
 }
 
-.section2 {
+.section2, .section3 {
   background-color: #000;
   color: #FFF;
   position: relative;
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   min-height: 30em;
   display: flex;
   flex-wrap: wrap;
@@ -1168,6 +1168,10 @@ body.subpage {
   .wrapper {
     position: relative;
     z-index: 10;
+  }
+  .flexwrap {
+    justify-content: center;
+    align-items: center;
   }
   .textwrap {
     width: 100%;
@@ -1189,6 +1193,23 @@ body.subpage {
       margin: 0 0 25px;
     }
   }
+  .imgblock {
+    margin: 0 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include tab {
+      width: 50%;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      @include tab {
+        width: 80%;
+      }
+    }
+  }
   .sectionBg {
     position: absolute;
     top: 0;
@@ -1200,3 +1221,158 @@ body.subpage {
     background-position: center;
   }
 }
+
+
+.section3 {
+  @include tab {
+    .flexwrap {
+      flex-direction: row-reverse;
+    }
+  }
+  .textwrap {
+    color: #000;
+    h2 {
+      font-weight: 500;
+    }
+  }
+}
+
+
+.repeatable-blocks {
+  .repeatable {
+    position: relative;
+  }
+  .fullwidthBlock {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+    top: -20px;
+    .wrapper {
+      max-width: 1000px;
+      width: 100%;
+      margin: 0 auto;
+    }
+    figure.icon {
+      margin: 0 0 20px;
+      text-align: center;
+      img {
+        display: inline-block;
+        width: 100px;
+        height: auto;
+      }
+    }
+    h2 {
+      font-size: 50px;
+      font-weight: 500;
+      line-height: 1.2;
+      margin: 0 0 25px;
+      color: $color1;
+    }
+    .buttonsWrapper {
+      margin-top: 15px;
+      a {
+        margin: 5px 6px;
+      }
+    }
+  }
+
+  .twoColumnBlock {
+    .wrapper {
+      padding-top: 80px;
+      padding-bottom: 80px;
+      min-height: 350px;
+      position: relative;
+      z-index: 5;
+    }
+    .flexwrap {
+      justify-content: center;
+      align-items: center;
+
+      .textCol {
+        width: 100%;
+        @include tab {
+          width: 50%;
+        }
+
+        a {
+          display: inline-block;
+          color: $color1;
+          text-decoration: underline;
+          &:hover {
+            opacity: 0.75;
+          }
+        }
+        h2, h3 {
+          font-weight: 500;
+          line-height: 1.2;
+          margin: 0 0 25px;
+        }
+        h2 {
+          font-size: 45px;
+          color: $color1;
+        }
+        h3 {
+          font-size: 35px;
+        }
+
+        p {
+          strong {
+            color: $color3;
+          }
+        }
+      }
+
+      .imageCol {
+        margin: 0 0;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include tab {
+          width: 50%;
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+          @include tab {
+            width: 80%;
+          }
+        }
+      }
+    }
+
+    .buttonsWrapper {
+      margin-top: 25px;
+      a {
+        margin: 5px 6px;
+      }
+    }
+
+    .bgImage {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: #CCC;
+    }
+
+    &.content-right {
+      .flexwrap {
+        @include tab {
+          flex-direction: row-reverse;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+

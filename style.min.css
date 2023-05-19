@@ -1488,12 +1488,39 @@ body.subpage #content{padding-top:50px;padding-bottom:0;min-height:25em}
 .subpageBanner .layer2{width:40%;height:100%;background-position:bottom center;background-size:contain;background-repeat:no-repeat}
 .subpageBanner .bannerText{position:relative;top:0;left:0;max-width:1300px;width:100%;margin:0 auto;height:100%;z-index:5;font-family:"Proxima Nova",sans-serif;font-size:4.5rem;font-weight:500;line-height:1.2;color:#fff;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding:30px 30px}
 .subpageBanner .bannerText .text{width:100%;text-align:center}
-.section2{background-color:#000;color:#fff;position:relative;padding-top:60px;padding-bottom:60px;min-height:30em;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
-.section2 .wrapper{position:relative;z-index:10}
-.section2 .textwrap{width:100%;text-align:center}
-.section2 .textwrap h2{font-size:2.3rem;font-weight:400;line-height:1.2;margin:0 0 25px}
-.section2 .textwrap h3{font-size:2rem;font-weight:400;line-height:1.3;margin:0 0 25px}
-.section2 .sectionBg{position:absolute;top:0;left:0;width:100%;height:100%;background-size:cover;background-position:bottom center;background-position:center}
+.section2,.section3{background-color:#000;color:#fff;position:relative;padding-top:50px;padding-bottom:50px;min-height:30em;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.section2 .wrapper,.section3 .wrapper{position:relative;z-index:10}
+.section2 .flexwrap,.section3 .flexwrap{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.section2 .textwrap,.section3 .textwrap{width:100%;text-align:center}
+.section2 .textwrap h2,.section3 .textwrap h2{font-size:2.3rem;font-weight:400;line-height:1.2;margin:0 0 25px}
+.section2 .textwrap h3,.section3 .textwrap h3{font-size:2rem;font-weight:400;line-height:1.3;margin:0 0 25px}
+.section2 .imgblock,.section3 .imgblock{margin:0;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
+.section2 .imgblock img,.section3 .imgblock img{width:100%;height:auto}
+.section2 .sectionBg,.section3 .sectionBg{position:absolute;top:0;left:0;width:100%;height:100%;background-size:cover;background-position:bottom center;background-position:center}
+.section3 .textwrap{color:#000}
+.section3 .textwrap h2{font-weight:500}
+.repeatable-blocks .repeatable{position:relative}
+.repeatable-blocks .fullwidthBlock{text-align:center;padding-top:50px;padding-bottom:50px;position:relative;top:-20px}
+.repeatable-blocks .fullwidthBlock .wrapper{max-width:1000px;width:100%;margin:0 auto}
+.repeatable-blocks .fullwidthBlock figure.icon{margin:0 0 20px;text-align:center}
+.repeatable-blocks .fullwidthBlock figure.icon img{display:inline-block;width:100px;height:auto}
+.repeatable-blocks .fullwidthBlock h2{font-size:50px;font-weight:500;line-height:1.2;margin:0 0 25px;color:#00b0fa}
+.repeatable-blocks .fullwidthBlock .buttonsWrapper{margin-top:15px}
+.repeatable-blocks .fullwidthBlock .buttonsWrapper a{margin:5px 6px}
+.repeatable-blocks .twoColumnBlock .wrapper{padding-top:80px;padding-bottom:80px;min-height:350px;position:relative;z-index:5}
+.repeatable-blocks .twoColumnBlock .flexwrap{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
+.repeatable-blocks .twoColumnBlock .flexwrap .textCol{width:100%}
+.repeatable-blocks .twoColumnBlock .flexwrap .textCol a{display:inline-block;color:#00b0fa;text-decoration:underline}
+.repeatable-blocks .twoColumnBlock .flexwrap .textCol a:hover{opacity:.75}
+.repeatable-blocks .twoColumnBlock .flexwrap .textCol h2,.repeatable-blocks .twoColumnBlock .flexwrap .textCol h3{font-weight:500;line-height:1.2;margin:0 0 25px}
+.repeatable-blocks .twoColumnBlock .flexwrap .textCol h2{font-size:45px;color:#00b0fa}
+.repeatable-blocks .twoColumnBlock .flexwrap .textCol h3{font-size:35px}
+.repeatable-blocks .twoColumnBlock .flexwrap .textCol p strong{color:#00ffb3}
+.repeatable-blocks .twoColumnBlock .flexwrap .imageCol{margin:0;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
+.repeatable-blocks .twoColumnBlock .flexwrap .imageCol img{width:100%;height:auto}
+.repeatable-blocks .twoColumnBlock .buttonsWrapper{margin-top:25px}
+.repeatable-blocks .twoColumnBlock .buttonsWrapper a{margin:5px 6px}
+.repeatable-blocks .twoColumnBlock .bgImage{position:absolute;top:0;left:0;width:100%;height:100%;background-position:center;background-repeat:no-repeat;background-size:cover;background-color:#ccc}
 @media(min-width:880px){.hero{height:700px}
 .intro-content .textcol{width:60%}
 .intro-content .imagecol{width:40%}
@@ -1512,7 +1539,14 @@ body.subpage #content{padding-top:50px;padding-bottom:0;min-height:25em}
 .subpageBanner .layer2{position:absolute;top:0;right:0}
 .subpageBanner .bannerText{padding:30px 20px}
 .subpageBanner .bannerText .text{width:55%;text-align:left}
-.section2 .textwrap{width:50%;text-align:left}
+.section2 .textwrap,.section3 .textwrap{width:50%;text-align:left}
+.section2 .imgblock,.section3 .imgblock{width:50%}
+.section2 .imgblock img,.section3 .imgblock img{width:80%}
+.section3 .flexwrap{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}
+.repeatable-blocks .twoColumnBlock .flexwrap .textCol{width:50%}
+.repeatable-blocks .twoColumnBlock .flexwrap .imageCol{width:50%}
+.repeatable-blocks .twoColumnBlock .flexwrap .imageCol img{width:80%}
+.repeatable-blocks .twoColumnBlock.content-right .flexwrap{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}
 }@media screen and (max-width:980px){.site-header .head-inner{padding-left:20px;padding-right:20px}
 .main-navigation ul.menu>li>a{padding:30px 15px}
 }@media screen and (max-width:880px){.site-header{height:60px}
