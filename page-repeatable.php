@@ -139,5 +139,7 @@ get_header();
 	</main><!-- #main -->
 </div><!-- #primary -->
 
+<?php get_template_part('parts/steps'); ?>
+
 <?php
 get_footer();
