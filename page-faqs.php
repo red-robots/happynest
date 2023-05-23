@@ -1,4 +1,7 @@
 <?php
+/*
+ * Template Name: FAQs
+ */
 $bannerImage = get_field('banner_image');
 $hasBanner = ( isset($bannerImage['image1']) && $bannerImage['image1'] ) ? 'hasBanner' : 'noBanner';
 get_header(); 
@@ -33,6 +36,39 @@ get_header();
           <?php if ($intro_text) { ?><div class="intro-text"><?php echo anti_email_spam($intro_text) ?></div><?php } ?>
         </div>
       </section>
+
+
+      <?php if( have_rows('faqs') ) { ?>
+      <section class="section section-faqs">
+        <div class="wrapper">
+          <div class="faqs">
+          <?php $i=1; while( have_rows('faqs') ) : the_row(); 
+            $topic = get_sub_field('topic');
+            $faqs = get_sub_field('faqs');
+            if($topic && $faqs) { ?>
+              <div class="faq-topic<?php echo ($i==1) ? ' active':''?>">
+                <div class="inner">
+                  <h2 class="topic"><a href="javascript:void(0)"><span class="expand"></span><?php echo $topic; ?></a></h2>
+                  <div class="faq-items">
+                  <?php foreach ($faqs as $f) { 
+                    $question = $f['question'];
+                    $answer = $f['answer'];
+                    if($question) { ?>
+                    <div class="item">
+                      <h3 class="question">Q: <?php echo $question ?></h3>
+                      <div class="answer"><?php echo $answer ?></div>
+                    </div>
+                    <?php } ?>
+                  <?php } ?>
+                  </div>
+                </div>
+              </div>
+            <?php $i++; } ?>
+          <?php endwhile; ?>
+          </div>
+        </div>
+      </section>
+      <?php } ?>
     
   <?php endwhile; ?>
   </main>

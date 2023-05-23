@@ -32,4 +32,19 @@ jQuery(document).ready(function ($) {
     $(this).toggleClass('active');
     $('body').toggleClass('menu-open');
   });
+  $('.faqs .topic').on('click', function (e) {
+    e.preventDefault();
+    var parent = $(this).parents('.faq-topic'); // parent.toggleClass('active');
+    // parent.find('.faq-items').slideToggle();
+
+    if (parent.hasClass('active')) {
+      parent.find('.faq-items').slideUp();
+      setTimeout(function () {
+        parent.removeClass('active');
+      }, 300);
+    } else {
+      parent.find('.faq-items').slideDown();
+      parent.addClass('active');
+    }
+  });
 });

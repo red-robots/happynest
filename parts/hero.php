@@ -37,11 +37,12 @@ if( is_home() || is_front_page() ) {
   <?php } ?>
 <?php } else { ?>
 
-  <?php  
+  <?php if( is_page() ) {
     $bannerImage = get_field('banner_image');
     $layer1 = ( isset($bannerImage['image1']) && $bannerImage['image1'] ) ? $bannerImage['image1'] : '';
     $layer2 = ( isset($bannerImage['image2']) && $bannerImage['image2'] ) ? $bannerImage['image2'] : '';
     $bannerText = ( isset($bannerImage['text']) && $bannerImage['text'] ) ? $bannerImage['text'] : '';
+    $bannerText = ($bannerText) ? $bannerText : get_the_title();
     if($layer1) { ?>
     <h1 class="pageTitleHidden"><?php echo get_the_title(); ?></h1>
     <div class="subpageBanner">
@@ -55,5 +56,6 @@ if( is_home() || is_front_page() ) {
         <?php } ?>
     </div>
     <?php } ?>
+  <?php } ?>
 
 <?php } ?>
