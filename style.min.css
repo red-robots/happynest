@@ -1530,7 +1530,7 @@ body.subpage #content{padding-top:50px;padding-bottom:0;min-height:25em}
 .section-faqs .topic{font-size:35px;font-weight:500;line-height:1.2;color:#00b0fa;position:relative;margin:0;cursor:pointer}
 .section-faqs .topic a{display:block;text-decoration:none;font-size:28px;font-weight:500;line-height:1.2;color:#00b0fa;position:relative;padding-left:43px;cursor:pointer}
 .section-faqs .topic a:hover{color:#02dcff}
-.section-faqs .topic .expand{display:block;width:26px;height:33px;background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#19ebad),to(#069cdb));background:linear-gradient(to bottom,#19ebad 0,#069cdb 100%);border-radius:50% 50% 50% 50%/60% 60% 40% 40%;position:absolute;top:6px;left:0}
+.section-faqs .topic .expand{display:block;width:26px;height:33px;background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#19ebad),to(#069cdb));background:linear-gradient(to bottom,#19ebad 0,#069cdb 100%);border-radius:50% 50% 50% 50%/60% 60% 40% 40%;position:absolute;top:-1px;left:4px}
 .section-faqs .topic .expand:before,.section-faqs .topic .expand:after{content:"";display:block;width:15px;height:2px;background:#fff;position:absolute;top:16px;left:6px;-webkit-transition:all ease .2s;transition:all ease .2s}
 .section-faqs .topic .expand:after{-webkit-transform:rotate(90deg);transform:rotate(90deg)}
 .section-faqs .faq-items{display:none;padding-left:43px;margin-top:30px}
@@ -1574,6 +1574,7 @@ body.subpage #content{padding-top:50px;padding-bottom:0;min-height:25em}
 .repeatable-blocks .twoColumnBlock.content-right .flexwrap{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}
 .section-intro .intro-text h2{font-size:50px}
 .section-faqs .topic a{font-size:35px}
+.section-faqs .topic .expand{top:6px;left:0}
 .section-faqs .faq-topic{padding:15px 30px}
 }@media screen and (max-width:980px){.site-header .head-inner{padding-left:20px;padding-right:20px}
 .main-navigation ul.menu>li>a{padding:30px 15px}
