@@ -1440,13 +1440,16 @@ body.subpage {
     a {
       display: block;
       text-decoration: none;
-      font-size: 35px;
+      font-size: 28px;
       font-weight: 500;
       line-height: 1.2;
       color: $color1;
       position: relative;
       padding-left: 43px;
       cursor: pointer;
+      @include tab {
+        font-size: 35px;
+      }
       &:hover {
         color: $color2;
       }
@@ -1503,9 +1506,12 @@ body.subpage {
   }
   .faq-topic  {
     border: 1px solid $color2;
-    padding: 15px 30px;
+    padding: 15px 15px;
     border-radius: 40px;
     margin-top: 30px;
+    @include tab {
+      padding: 15px 30px;
+    }
     &.active {
       .faq-items {
         display: block;

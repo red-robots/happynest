@@ -1528,7 +1528,7 @@ body.subpage #content{padding-top:50px;padding-bottom:0;min-height:25em}
 .section-faqs{background:#000;color:#fff;padding-top:80px;padding-bottom:80px}
 .section-faqs .wrapper{max-width:1000px}
 .section-faqs .topic{font-size:35px;font-weight:500;line-height:1.2;color:#00b0fa;position:relative;margin:0;cursor:pointer}
-.section-faqs .topic a{display:block;text-decoration:none;font-size:35px;font-weight:500;line-height:1.2;color:#00b0fa;position:relative;padding-left:43px;cursor:pointer}
+.section-faqs .topic a{display:block;text-decoration:none;font-size:28px;font-weight:500;line-height:1.2;color:#00b0fa;position:relative;padding-left:43px;cursor:pointer}
 .section-faqs .topic a:hover{color:#02dcff}
 .section-faqs .topic .expand{display:block;width:26px;height:33px;background:-webkit-gradient(linear,left top,left bottom,color-stop(0,#19ebad),to(#069cdb));background:linear-gradient(to bottom,#19ebad 0,#069cdb 100%);border-radius:50% 50% 50% 50%/60% 60% 40% 40%;position:absolute;top:6px;left:0}
 .section-faqs .topic .expand:before,.section-faqs .topic .expand:after{content:"";display:block;width:15px;height:2px;background:#fff;position:absolute;top:16px;left:6px;-webkit-transition:all ease .2s;transition:all ease .2s}
@@ -1539,7 +1539,7 @@ body.subpage #content{padding-top:50px;padding-bottom:0;min-height:25em}
 .section-faqs .faq-items .item:last-child{padding-bottom:10px}
 .section-faqs .faq-items .question{font-size:20px;font-weight:500;line-height:1.2}
 .section-faqs .faq-items .answer{font-size:15px}
-.section-faqs .faq-topic{border:1px solid #02dcff;padding:15px 30px;border-radius:40px;margin-top:30px}
+.section-faqs .faq-topic{border:1px solid #02dcff;padding:15px 15px;border-radius:40px;margin-top:30px}
 .section-faqs .faq-topic.active .faq-items{display:block}
 .section-faqs .faq-topic.active .topic .expand:after{-webkit-transform:rotate(0);transform:rotate(0)}
 .section-faqs .faq-topic:first-child{margin-top:0}
@@ -1573,6 +1573,8 @@ body.subpage #content{padding-top:50px;padding-bottom:0;min-height:25em}
 .repeatable-blocks .twoColumnBlock .flexwrap .imageCol img{max-width:100%;width:80%}
 .repeatable-blocks .twoColumnBlock.content-right .flexwrap{-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse}
 .section-intro .intro-text h2{font-size:50px}
+.section-faqs .topic a{font-size:35px}
+.section-faqs .faq-topic{padding:15px 30px}
 }@media screen and (max-width:980px){.site-header .head-inner{padding-left:20px;padding-right:20px}
 .main-navigation ul.menu>li>a{padding:30px 15px}
 }@media screen and (max-width:880px){.site-header{height:60px}
