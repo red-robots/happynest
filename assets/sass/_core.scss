@@ -608,6 +608,11 @@ body {
 }
 .section-6 {
   padding-bottom: 100px;
+  .stitle {
+    @include tab {
+      padding-right: 20vw;
+    }
+  }
   .wrapper {
     max-width: 100%;
     padding-top: 80px;
@@ -1330,9 +1335,9 @@ body.subpage {
         a {
           display: inline-block;
           color: $color1;
-          text-decoration: underline;
+          text-decoration: none;
           &:hover {
-            opacity: 0.75;
+            color: $color2;
           }
         }
         h2, h3 {

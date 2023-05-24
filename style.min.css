@@ -1512,8 +1512,8 @@ body.subpage #content{padding-top:50px;padding-bottom:0;min-height:25em}
 .repeatable-blocks .twoColumnBlock .wrapper{padding-top:80px;padding-bottom:80px;min-height:350px;position:relative;z-index:5}
 .repeatable-blocks .twoColumnBlock .flexwrap{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .repeatable-blocks .twoColumnBlock .flexwrap .textCol{width:100%}
-.repeatable-blocks .twoColumnBlock .flexwrap .textCol a{display:inline-block;color:#00b0fa;text-decoration:underline}
-.repeatable-blocks .twoColumnBlock .flexwrap .textCol a:hover{opacity:.75}
+.repeatable-blocks .twoColumnBlock .flexwrap .textCol a{display:inline-block;color:#00b0fa;text-decoration:none}
+.repeatable-blocks .twoColumnBlock .flexwrap .textCol a:hover{color:#02dcff}
 .repeatable-blocks .twoColumnBlock .flexwrap .textCol h2,.repeatable-blocks .twoColumnBlock .flexwrap .textCol h3{font-weight:500;line-height:1.2;margin:0 0 25px}
 .repeatable-blocks .twoColumnBlock .flexwrap .textCol h2{font-size:2.3rem;color:#00b0fa}
 .repeatable-blocks .twoColumnBlock .flexwrap .textCol h3{font-size:35px}
@@ -1555,6 +1555,7 @@ body.subpage #content{padding-top:50px;padding-bottom:0;min-height:25em}
 .section-2.twocol .fcol.textcol{width:60%}
 .section-4.twocol .fcol.imagecol{width:40%}
 .section-4.twocol .fcol.textcol{width:60%;padding:50px 20px 30px 10vw}
+.section-6 .stitle{padding-right:20vw}
 .section-6 .wrapper{max-width:98%;padding-left:5vw;padding-right:5vw}
 .site-footer .footCol{width:20%}
 .site-footer .footCol.footLogo{width:20%}
