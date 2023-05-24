@@ -1404,9 +1404,9 @@ body{font-family:"Proxima Nova",sans-serif;font-size:17px;line-height:1.4}
 .columns-wrapper .fcol h3{font-size:30px;font-weight:500;line-height:1.2;margin:0 0 10px;text-align:center}
 .columns-wrapper .buttondiv{margin-top:50px;text-align:center}
 .section h2{font-size:50px;font-weight:500;line-height:1.1}
-.section-1{background:#000}
+.section-1{background:#000;padding-bottom:80px}
 .section-2{position:relative;padding-bottom:40px}
-.section-2:before{content:"";display:block;width:100%;height:80px;background:#000;position:absolute;top:0;left:0}
+.section-2:before{content:"";display:block;width:100%;height:100px;background:#000;position:absolute;top:0;left:0}
 .section-2 .flexwrap{position:relative;z-index:2}
 .section-2 .fcol{width:100%}
 .section-2 .imagecol{margin:0}
@@ -1462,6 +1462,9 @@ body{font-family:"Proxima Nova",sans-serif;font-size:17px;line-height:1.4}
 .section-6 .imageblock{margin:0;max-width:570px;position:absolute;top:50%;right:0;margin-top:80px;-webkit-transform:translateY(-50%);transform:translateY(-50%)}
 .section-6 .imageblock img{width:100%;height:auto}
 .generic-layout .main-content{max-width:1400px;width:100%;margin:0 auto;padding-left:20px;padding-right:20px;padding-top:20px;padding-bottom:60px}
+.section ul{margin:0;padding:0 0 0 20px;list-style:none}
+.section ul li{position:relative;padding-left:15px}
+.section ul li:before{content:"";display:block;width:5px;height:5px;border-radius:100px;background:#00b0fa;position:absolute;top:7px;left:2px}
 .site-footer{background:#000;color:#fff;border-top:2px solid #fff;padding-top:50px;padding-bottom:50px}
 .site-footer .flexwrap{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;margin-left:-20px;margin-right:-20px}
 .site-footer .footLogo{margin:0}
@@ -1526,6 +1529,9 @@ body.subpage #content{padding-top:50px;padding-bottom:0;min-height:25em}
 .repeatable-blocks .twoColumnBlock .buttonsWrapper{margin-top:25px}
 .repeatable-blocks .twoColumnBlock .buttonsWrapper a{margin:5px 6px}
 .repeatable-blocks .twoColumnBlock .bgImage{position:absolute;top:0;left:0;width:100%;height:100%;background-position:center;background-repeat:no-repeat;background-size:cover;background-color:#ccc}
+.repeatable-blocks ul{margin:0;padding:0 0 0 20px;list-style:none}
+.repeatable-blocks ul li{position:relative;padding-left:15px}
+.repeatable-blocks ul li:before{content:"";display:block;width:5px;height:5px;border-radius:100px;background:#00b0fa;position:absolute;top:7px;left:2px}
 .section-intro{text-align:center;padding-top:40px;padding-bottom:60px}
 .section-intro .wrapper{max-width:1000px}
 .section-intro .intro-icon{margin:0 0 20px;text-align:center}
@@ -1554,6 +1560,7 @@ body.subpage #content{padding-top:50px;padding-bottom:0;min-height:25em}
 .intro-content .textcol{width:60%}
 .intro-content .imagecol{width:40%}
 .columns-wrapper .fcol{width:33.333%}
+.section-1{padding-bottom:20px}
 .section-2 .textcol .inner{padding:90px 10vw 30px}
 .section-2.twocol .fcol.imagecol{width:40%}
 .section-2.twocol .fcol.textcol{width:60%}

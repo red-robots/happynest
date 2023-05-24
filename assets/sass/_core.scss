@@ -391,6 +391,10 @@ body {
 
 .section-1 {
   background: #000;
+  padding-bottom: 80px;
+  @include tab {
+    padding-bottom: 20px;
+  }
 }
 .section-2 {
   position: relative;
@@ -399,7 +403,7 @@ body {
     content:"";
     display: block;
     width: 100%;
-    height: 80px;
+    height: 100px;
     background: #000;
     position: absolute;
     top: 0;
@@ -723,6 +727,28 @@ body {
   }
 }
 
+.section {
+  ul {
+    margin: 0 0;
+    padding: 0 0 0 20px;
+    list-style: none;
+    li {
+      position: relative;
+      padding-left: 15px;
+      &:before {
+        content:"";
+        display: block;
+        width: 5px;
+        height: 5px;
+        border-radius: 100px;
+        background: $color1;
+        position: absolute;
+        top: 7px;
+        left: 2px;
+      }
+    }
+  }
+}
 
 /* FOOTER */
 .site-footer {
@@ -1430,6 +1456,26 @@ body.subpage {
         @include tab {
           flex-direction: row-reverse;
         }
+      }
+    }
+  }
+  ul {
+    margin: 0 0;
+    padding: 0 0 0 20px;
+    list-style: none;
+    li {
+      position: relative;
+      padding-left: 15px;
+      &:before {
+        content:"";
+        display: block;
+        width: 5px;
+        height: 5px;
+        border-radius: 100px;
+        background: $color1;
+        position: absolute;
+        top: 7px;
+        left: 2px;
       }
     }
   }
