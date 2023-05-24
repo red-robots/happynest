@@ -19,18 +19,31 @@
       <?php if ($content_steps) { ?>
         <div class="steps">
           <div class="flexwrap">
-          <?php $ctr=1; foreach ($content_steps as $s) { ?>
+          <?php $ctr=1; foreach ($content_steps as $s) { 
+              $item = $s['title_link'];
+              $itemTarget = ( isset($item['target']) && $item['target'] ) ? $item['target'] : '_self';
+              $itemText = ( isset($item['title']) && $item['title'] ) ? $item['title'] : '';
+              $itemLink = ( isset($item['url']) && $item['url'] ) ? $item['url'] : '';
+              $link_start = '';
+              $link_end = '';
+              if($itemText && $itemLink) {
+                $link_start = '<a href="'.$itemLink.'" target="'.$itemTarget.'">';
+                $link_end = '</a>';
+              }
+            ?>
             <?php if ($s['title']) { ?>
             <div class="step" data-counter="<?php echo $ctr; ?>">
+              <?php echo $link_start; ?>
               <?php if ($s['icon_img']) { ?>
                <div class="icondiv">
                   <img src="<?php echo $s['icon_img']['url'] ?>" alt="">
                </div> 
               <?php } ?>
 
-              <?php if ($s['title']) { ?>
-               <div class="titlediv"><?php echo $s['title'] ?></div> 
+              <?php if ($itemText) { ?>
+               <div class="titlediv"><?php echo $itemText ?></div> 
               <?php } ?>
+              <?php echo $link_end; ?>
             </div>
             <?php $ctr++; } ?>
           <?php } ?>

@@ -61,7 +61,7 @@ get_header();
       <?php if ($intro_text) { ?>
       <div class="intro-content <?php echo $intro_class ?>">
         <div class="col textcol">
-          <?php echo $intro_text ?>
+          <?php echo anti_email_spam($intro_text) ?>
         </div>
 
         <?php if ($intro_image) { ?>
@@ -129,7 +129,7 @@ get_header();
       <?php if ($section2_content) { ?>
       <div class="fcol textcol">
         <div class="inner">
-          <div class="text"><?php echo $section2_content ?></div>
+          <div class="text"><?php echo anti_email_spam($section2_content) ?></div>
           <?php if ($s2Text && $s2Link) { ?>
           <div class="buttondiv">
             <a href="<?php echo $s2Link ?>" target="<?php echo $s2Target ?>" class="button"><?php echo $s2Text ?></a>
@@ -186,7 +186,7 @@ get_header();
         <?php if ($section4_content) { ?>
         <div class="fcol textcol">
           <div class="inner">
-            <div class="text"><?php echo $section4_content ?></div>
+            <div class="text"><?php echo anti_email_spam($section4_content) ?></div>
           </div>
         </div>  
         <?php } ?>
@@ -214,7 +214,7 @@ get_header();
       <div class="flexwrap">
         <div class="fcol textcol">
           <div class="inner">
-            <div class="text"><?php echo $section5_content ?></div>
+            <div class="text"><?php echo anti_email_spam($section5_content) ?></div>
             <?php if ($s5Text && $s5Link) { ?>
             <div class="buttondiv">
               <a href="<?php echo $s5Link ?>" target="<?php echo $s5Target ?>" class="button"><?php echo $s5Text ?></a>

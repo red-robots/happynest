@@ -1452,7 +1452,11 @@ body{font-family:"Proxima Nova",sans-serif;font-size:17px;line-height:1.4}
 .section-6 .step:before{content:attr(data-counter);display:block;font-family:"Proxima Nova",sans-serif;font-size:23rem;font-weight:600;line-height:1;position:absolute;top:50%;left:50%;color:#fff;-webkit-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%);opacity:.25}
 .section-6 .step div{position:relative;z-index:5}
 .section-6 .step .icondiv{font-size:2.3em;line-height:1;text-align:center;margin-bottom:15px}
-.section-6 .step .icondiv img{display:inline-block;width:auto;height:55px}
+.section-6 .step .icondiv img{display:inline-block;width:auto;height:55px;position:relative}
+.section-6 .step a{display:block;text-decoration:none;color:#000}
+.section-6 .step a div,.section-6 .step a img{-webkit-transition:all ease .3s;transition:all ease .3s}
+.section-6 .step a:hover .icondiv img{-webkit-transform:translateY(-2px);transform:translateY(-2px);-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-name:animateUpDown;animation-name:animateUpDown}
+.section-6 .step a:hover .titlediv{opacity:.85}
 .section-6 .steps-wrapper{padding-right:440px}
 .section-6 .buttondiv{margin-top:60px;position:relative;z-index:10}
 .section-6 .imageblock{margin:0;max-width:570px;position:absolute;top:50%;right:0;margin-top:80px;-webkit-transform:translateY(-50%);transform:translateY(-50%)}
@@ -2103,4 +2107,8 @@ to{visibility:hidden;-webkit-transform:translate3d(0,-100%,0);transform:translat
 100%{background-position:160%}
 }@keyframes animateBgColor{0%{background-position:0 0}
 100%{background-position:160%}
+}@-webkit-keyframes animateUpDown{0%,100%{-webkit-transform:translateY(0);transform:translateY(0)}
+50%{-webkit-transform:translateY(4px);transform:translateY(4px)}
+}@keyframes animateUpDown{0%,100%{-webkit-transform:translateY(0);transform:translateY(0)}
+50%{-webkit-transform:translateY(4px);transform:translateY(4px)}
 }
