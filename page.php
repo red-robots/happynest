@@ -21,18 +21,18 @@ get_header();
       <?php  
         $intro_icon = get_field('intro_icon');
         $intro_text = get_field('intro_text');
-      ?>
-
-      <section class="section section-intro">
-        <div class="wrapper">
-          <?php if ($intro_icon) { ?>
-          <figure class="intro-icon">
-            <img src="<?php echo $intro_icon['url'] ?>" alt="" />
-          </figure>
-          <?php } ?>  
-          <?php if ($intro_text) { ?><div class="intro-text"><?php echo anti_email_spam($intro_text) ?></div><?php } ?>
-        </div>
-      </section>
+        if($intro_text) { ?>
+        <section class="section section-intro">
+          <div class="wrapper">
+            <?php if ($intro_icon) { ?>
+            <figure class="intro-icon">
+              <img src="<?php echo $intro_icon['url'] ?>" alt="" />
+            </figure>
+            <?php } ?>  
+            <div class="intro-text"><?php echo anti_email_spam($intro_text) ?></div>
+          </div>
+        </section>
+        <?php } ?>  
     
   <?php endwhile; ?>
   </main>

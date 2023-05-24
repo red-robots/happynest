@@ -1,29 +1,31 @@
 <?php
-  $home_page_id = 2;
-  $section6_title = get_field('section6_title',$home_page_id);
-  $section6_image = get_field('section6_image',$home_page_id);
-  $section6_steps = get_field('section6_steps',$home_page_id);
-  $s6button = get_field('section6_button',$home_page_id);
-  $s6Target = (isset($s6button['target']) && $s6button['target']) ? $s6button['target'] : "_self";
-  $s6Text = (isset($s6button['title']) && $s6button['title']) ? $s6button['title'] : "";
-  $s6Link = (isset($s6button['url']) && $s6button['url']) ? $s6button['url'] : "";
+  $steps = get_field('footglobal_steps','option');
+  $section_title = ( isset($steps['section_title']) && $steps['section_title'] ) ? $steps['section_title'] : '';
+  $content_steps = ( isset($steps['steps']) && $steps['steps'] ) ? $steps['steps'] : '';
+  $feat_image = ( isset($steps['feat_image']) && $steps['feat_image'] ) ? $steps['feat_image'] : '';
+  $button = ( isset($steps['button']) && $steps['button'] ) ? $steps['button'] : '';
+  $btnTarget = ( isset($button['target']) && $button['target'] ) ? $button['target'] : '_self';
+  $btnText = ( isset($button['title']) && $button['title'] ) ? $button['title'] : '';
+  $btnLink = ( isset($button['url']) && $button['url'] ) ? $button['url'] : '';
 
-  if($section6_title || $section6_steps) { ?>
+  if($section_title || $content_steps) { ?>
   <section class="section section-6 gblue">
     <div class="wrapper">
-      <?php if ($section6_title) { ?>
-        <h2 class="stitle"><?php echo $section6_title ?></h2>
+      <?php if ($section_title) { ?>
+        <h2 class="stitle"><?php echo $section_title ?></h2>
       <?php } ?> 
 
       <div class="steps-wrapper">
-      <?php if ($section6_steps) { ?>
+      <?php if ($content_steps) { ?>
         <div class="steps">
           <div class="flexwrap">
-          <?php $ctr=1; foreach ($section6_steps as $s) { ?>
+          <?php $ctr=1; foreach ($content_steps as $s) { ?>
             <?php if ($s['title']) { ?>
             <div class="step" data-counter="<?php echo $ctr; ?>">
-              <?php if ($s['icon']) { ?>
-               <div class="icondiv"><i class="<?php echo $s['icon'] ?>"></i></div> 
+              <?php if ($s['icon_img']) { ?>
+               <div class="icondiv">
+                  <img src="<?php echo $s['icon_img']['url'] ?>" alt="">
+               </div> 
               <?php } ?>
 
               <?php if ($s['title']) { ?>
@@ -36,17 +38,17 @@
         </div>
       <?php } ?> 
 
-      <?php if ($s6Text && $s6Link) { ?>
+      <?php if ($btnText && $btnLink) { ?>
       <div class="buttondiv button-center">
-        <a href="<?php echo $s6Link ?>" target="<?php echo $s6Target ?>" class="button black"><?php echo $s6Text ?></a>
+        <a href="<?php echo $btnLink ?>" target="<?php echo $btnTarget ?>" class="button black"><?php echo $btnText ?></a>
       </div>
       <?php } ?>
       </div>  
 
 
-      <?php if ($section6_image) { ?>
+      <?php if ($feat_image) { ?>
       <figure class="imageblock">
-        <img src="<?php echo $section6_image['url'] ?>" alt="<?php echo $section6_image['title'] ?>" />
+        <img src="<?php echo $feat_image['url'] ?>" alt="<?php echo $feat_image['title'] ?>" />
       </figure>
       <?php } ?>
 

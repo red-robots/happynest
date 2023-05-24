@@ -151,3 +151,18 @@ function social_icons() {
 }
 
 
+add_action('admin_head','customscript_admin_head');
+function customscript_admin_head() { ?>
+  <style>
+    .acf-field[data-name="icon_img"] .image-wrap img {
+      width: auto;
+      max-height: 40px;
+      min-height: 40px;
+      height: 40px;
+    }
+  </style>
+<?php }
+
+
+
+

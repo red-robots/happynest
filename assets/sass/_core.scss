@@ -653,6 +653,13 @@ body {
     .icondiv {
       font-size: 2.3em;
       line-height: 1;
+      text-align: center;
+      margin-bottom: 15px;
+      img {
+        display: inline-block;
+        width: auto;
+        height: 55px;
+      }
     }
   }
   .steps-wrapper {
@@ -675,6 +682,18 @@ body {
       width: 100%;
       height: auto;
     }
+  }
+}
+
+.generic-layout {
+  .main-content {
+    max-width: $wrapper;
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 60px;
   }
 }
 
