@@ -27,11 +27,14 @@
               $link_start = '';
               $link_end = '';
               if($itemText && $itemLink) {
+                if($itemLink=='#') {
+                  $itemLink=='javascript:void(0)';
+                }
                 $link_start = '<a href="'.$itemLink.'" target="'.$itemTarget.'">';
                 $link_end = '</a>';
               }
             ?>
-            <?php if ($s['title']) { ?>
+            <?php if ($itemText) { ?>
             <div class="step" data-counter="<?php echo $ctr; ?>">
               <?php echo $link_start; ?>
               <?php if ($s['icon_img']) { ?>
@@ -39,10 +42,7 @@
                   <img src="<?php echo $s['icon_img']['url'] ?>" alt="">
                </div> 
               <?php } ?>
-
-              <?php if ($itemText) { ?>
-               <div class="titlediv"><?php echo $itemText ?></div> 
-              <?php } ?>
+              <div class="titlediv"><?php echo $itemText ?></div> 
               <?php echo $link_end; ?>
             </div>
             <?php $ctr++; } ?>
