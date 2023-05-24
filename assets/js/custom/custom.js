@@ -49,4 +49,11 @@ jQuery(document).ready(function ($) {
     }
   });
 
+  var wow = new WOW();
+    wow.init();
+
+  WOW.prototype.addBox = function(element){
+      this.boxes.push(element);
+  };
+  
 }); 

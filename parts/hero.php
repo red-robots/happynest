@@ -19,7 +19,7 @@ if( is_home() || is_front_page() ) {
 
               <div class="text"><?php echo $hero_text ?></div>
               <?php if ($buttonText && $buttonLink) { ?>
-              <div class="buttondiv">
+              <div class="buttondiv fadeInUp wow">
                 <a href="<?php echo $buttonLink ?>" target="<?php echo $buttonTarget ?>" class="button"><?php echo $buttonText ?></a>
               </div>
               <?php } ?>

@@ -60,12 +60,12 @@ get_header();
       ?>
       <?php if ($intro_text) { ?>
       <div class="intro-content <?php echo $intro_class ?>">
-        <div class="col textcol">
+        <div class="col textcol fadeInLeft wow">
           <?php echo anti_email_spam($intro_text) ?>
         </div>
 
         <?php if ($intro_image) { ?>
-        <div class="col imagecol">
+        <div class="col imagecol fadeInRight wow">
           <figure>
             <img src="<?php echo $intro_image['url'] ?>" alt="<?php echo $intro_image['title'] ?>">
           </figure>
@@ -87,7 +87,7 @@ get_header();
   <?php if ($intro_columns) { ?>
   <section class="section section-1 intro-columns columns-wrapper">
     <div class="wrapper">
-      <div class="flexwrap">
+      <div class="flexwrap fadeInUp wow">
       <?php foreach ($intro_columns as $col) { ?>
         <?php if ($col['content']) { ?>
           <div class="fcol">
@@ -121,13 +121,13 @@ get_header();
   <section class="section section-2 <?php echo $section2_class ?>">
     <div class="flexwrap">
       <?php if ($section2_image) { ?>
-      <figure class="fcol imagecol">
+      <figure class="fcol imagecol fadeInUp wow">
         <img src="<?php echo $section2_image['url'] ?>" alt="<?php echo $section2_image['title'] ?>" />
       </figure>  
       <?php } ?>
 
       <?php if ($section2_content) { ?>
-      <div class="fcol textcol">
+      <div class="fcol textcol fadeInRight wow">
         <div class="inner">
           <div class="text"><?php echo anti_email_spam($section2_content) ?></div>
           <?php if ($s2Text && $s2Link) { ?>
@@ -148,7 +148,7 @@ get_header();
   $section3_stats = get_field('section3_stats');
   if($section3_title || $section3_stats) { ?>
   <section class="section section-3">
-    <div class="wrapper">
+    <div class="wrapper fadeInUp wow">
       <?php if ($section3_title) { ?>
         <h2 class="stitle"><?php echo $section3_title ?></h2>
       <?php } ?>
@@ -184,7 +184,7 @@ get_header();
     <div class="wrapper-fullwidth">
       <div class="flexwrap">
         <?php if ($section4_content) { ?>
-        <div class="fcol textcol">
+        <div class="fcol textcol fadeInLeft wow">
           <div class="inner">
             <div class="text"><?php echo anti_email_spam($section4_content) ?></div>
           </div>
@@ -192,7 +192,7 @@ get_header();
         <?php } ?>
 
         <?php if ($section4_image) { ?>
-        <figure class="fcol imagecol" style="background-image:url('<?php echo $section4_image['url'] ?>')">
+        <figure class="fcol imagecol fadeInRight wow" style="background-image:url('<?php echo $section4_image['url'] ?>')">
         </figure>  
         <?php } ?>
       </div>
@@ -212,7 +212,7 @@ get_header();
   <section class="section section-5">
     <div class="wrapper">
       <div class="flexwrap">
-        <div class="fcol textcol">
+        <div class="fcol textcol fadeInUp wow">
           <div class="inner">
             <div class="text"><?php echo anti_email_spam($section5_content) ?></div>
             <?php if ($s5Text && $s5Link) { ?>
