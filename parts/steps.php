@@ -28,7 +28,7 @@
               $link_end = '';
               if($itemText && $itemLink) {
                 if($itemLink=='#') {
-                  $itemLink=='javascript:void(0)';
+                  $itemLink='javascript:void(0)';
                 }
                 $link_start = '<a href="'.$itemLink.'" target="'.$itemTarget.'">';
                 $link_end = '</a>';
