@@ -60,12 +60,12 @@ get_header();
       ?>
       <?php if ($intro_text) { ?>
       <div class="intro-content <?php echo $intro_class ?>">
-        <div class="col textcol fadeInLeft wow">
+        <div class="col textcol animated animate-this" data-effect="fadeInUp">
           <?php echo anti_email_spam($intro_text) ?>
         </div>
 
         <?php if ($intro_image) { ?>
-        <div class="col imagecol fadeInRight wow">
+        <div class="col imagecol animated animate-this" data-effect="fadeInRight">
           <figure>
             <img src="<?php echo $intro_image['url'] ?>" alt="<?php echo $intro_image['title'] ?>">
           </figure>
@@ -87,7 +87,7 @@ get_header();
   <?php if ($intro_columns) { ?>
   <section class="section section-1 intro-columns columns-wrapper">
     <div class="wrapper">
-      <div class="flexwrap fadeInUp wow">
+      <div class="flexwrap fadeInUp wow animated animate-this" data-effect="fadeInUp">
       <?php foreach ($intro_columns as $col) { ?>
         <?php if ($col['content']) { ?>
           <div class="fcol">
@@ -121,7 +121,7 @@ get_header();
   <section class="section section-2 <?php echo $section2_class ?>">
     <div class="flexwrap">
       <?php if ($section2_image) { ?>
-      <figure class="fcol imagecol fadeInUp wow">
+      <figure class="fcol imagecol animate-this" data-effect="slowUp">
         <img src="<?php echo $section2_image['url'] ?>" alt="<?php echo $section2_image['title'] ?>" />
       </figure>  
       <?php } ?>

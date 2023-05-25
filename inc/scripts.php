@@ -32,6 +32,24 @@ function bellaworks_scripts() {
   );
 
   wp_enqueue_script( 
+    'bellaworks-waypoints', 
+    'https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js', 
+    array(), '20230420', true 
+  );
+
+  wp_enqueue_script( 
+    'bellaworks-inview', 
+    'https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/shortcuts/inview.js', 
+    array(), '20230420', true 
+  );
+
+  wp_enqueue_script( 
+    'bellaworks-notify', 
+    'https://cdnjs.cloudflare.com/ajax/libs/notify/0.4.2/notify.min.js', 
+    array(), '20230420', true 
+  );
+
+  wp_enqueue_script( 
     'bellaworks-custom', 
     get_template_directory_uri() . '/assets/js/custom/custom.js', 
     array(), '20230420', true 

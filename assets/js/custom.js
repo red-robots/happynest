@@ -52,5 +52,49 @@ jQuery(document).ready(function ($) {
 
   WOW.prototype.addBox = function (element) {
     this.boxes.push(element);
-  };
+  }; // var waypoint = new Waypoint({
+  //   element: $('.animate-this'),
+  //   handler: function(direction) {
+  //     // console.log(direction);
+  //     if( direction=="down" ) {
+  //       if( $(this.element).attr('data-effect')!=="undefined" ) {
+  //         $(this.element).addClass( $(this.element).attr('data-effect') );
+  //       }
+  //     } else {
+  //       if( $(this.element).attr('data-effect')!=="undefined" ) {
+  //         $(this.element).removeClass( $(this.element).attr('data-effect') );
+  //       }
+  //     }
+  //   },
+  //   offset: 0 
+  // })
+  // put section elements to watch in here:
+
+
+  var animEl = $('.animate-this');
+  animEl.each(function () {
+    var self = this;
+    /* eslint-disable*/
+
+    var inview = new Waypoint.Inview({
+      /* eslint-enable*/
+      element: this,
+      enter: function enter(direction) {
+        //$(self).addClass('animate');
+        // remove following line when adding to project
+        //$.notify('Enter triggered with direction ' + direction)
+        if ($(self).attr('data-effect') !== "undefined") {
+          $(self).addClass('start');
+        }
+      },
+      exited: function exited(direction) {
+        //$(self).removeClass('animate');
+        // remove following line when adding to project
+        //$.notify('Exited triggered with direction ' + direction)
+        if ($(self).attr('data-effect') !== "undefined") {
+          $(self).removeClass('start');
+        }
+      }
+    });
+  });
 });
