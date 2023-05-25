@@ -38,7 +38,7 @@ get_header();
   </main>
 </div><!-- #primary -->
 
-<?php get_template_part('parts/steps'); ?>
+<?php //get_template_part('parts/steps'); ?>
 
 <?php
 get_footer();
