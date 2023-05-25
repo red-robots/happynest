@@ -28,7 +28,7 @@
       <?php if ($socialMedia) { ?>
       <div class="footCol socialMediaLinks">
         <?php foreach ($socialMedia as $s) { ?>
-          <a href="<?php echo $s['url'] ?>" class="social" aria-label="<?php echo $s['type'] ?>"><i class="<?php echo $s['icon'] ?>"></i></a>
+          <a href="<?php echo $s['url'] ?>" target="_blank" class="social" aria-label="<?php echo $s['type'] ?>"><i class="<?php echo $s['icon'] ?>"></i></a>
         <?php } ?>
       </div>
       <?php } ?>

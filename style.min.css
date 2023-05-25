@@ -1397,6 +1397,7 @@ body{font-family:"Proxima Nova",sans-serif;font-size:17px;line-height:1.4}
 .intro-content .imagecol{width:100%;text-align:center}
 .intro-content .imagecol figure{display:inline-block;margin:0;max-width:500px;width:100%}
 .intro-content .imagecol figure img{width:100%;height:auto}
+body.home .intro .wrapper{max-width:1100px}
 .columns-wrapper{padding-bottom:60px}
 .columns-wrapper .flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
 .columns-wrapper .fcol{width:100%;padding:15px}
@@ -1571,6 +1572,7 @@ body.subpage #content{padding-top:50px;padding-bottom:0;min-height:25em}
 @media(min-width:880px){.hero{height:700px}
 .intro-content .textcol{width:60%}
 .intro-content .imagecol{width:40%}
+body.home .intro .wrapper .textcol{padding-right:10vw}
 .columns-wrapper .fcol{width:33.333%}
 .section-1{padding-bottom:20px}
 .section-2 .textcol .inner{padding:90px 10vw 30px}

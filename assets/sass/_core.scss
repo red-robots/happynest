@@ -349,6 +349,17 @@ body {
   }
 }
 
+body.home {
+  .intro .wrapper {
+    max-width: 1100px;
+    .textcol {
+      @include tab {
+        padding-right: 10vw;
+      }
+    }
+  }
+}
+
 .columns-wrapper {
   padding-bottom: 60px;
   .flexwrap {
