@@ -1545,7 +1545,7 @@ body.subpage #content{padding-top:50px;padding-bottom:0;min-height:25em}
 .repeatable-blocks .twoColumnBlock .buttonsWrapper a{margin:5px 6px}
 .repeatable-blocks .twoColumnBlock .bgImage{position:absolute;top:0;left:0;width:100%;height:100%;background-position:center;background-repeat:no-repeat;background-size:cover;background-color:#ccc}
 .repeatable-blocks .buttonsWrapper a{color:#fff !important}
-.repeatable-blocks ul{margin:0;padding:0 0 0 20px;list-style:none}
+.repeatable-blocks ul{margin:0 0 18px;padding:0 0 0 20px;list-style:none}
 .repeatable-blocks ul li{position:relative;padding-left:15px}
 .repeatable-blocks ul li:before{content:"";display:block;width:5px;height:5px;border-radius:100px;background:#00b0fa;position:absolute;top:7px;left:2px}
 .section-intro{text-align:center;padding-top:40px;padding-bottom:60px}
