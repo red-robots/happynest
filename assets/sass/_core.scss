@@ -750,6 +750,79 @@ body {
   }
 }
 
+.sitemap {
+  .titlediv {
+    margin-bottom: 40px;
+  }
+}
+#sitemap-wrap {
+  max-width: 900px;
+  width: 100%;
+  ul.menu {
+    margin: 0 0;
+    padding: 0 0 0 15px;
+    list-style: none;
+    column-count: 2;
+    a {
+      display: inline-block;
+      font-size: 1.15em;
+      text-decoration: none;
+      color: #000;
+      &:hover {
+        color: $color1;
+      }
+    }
+  }
+  ul.menu > li {
+    margin: 5px 0;
+    position: relative;
+    padding-left: 15px;
+    break-inside: avoid;
+    &:before {
+      content:"";
+      display: block;
+      width: 5px;
+      height: 5px;
+      border-radius: 100px;
+      background: $color1;
+      position: absolute;
+      top: 10px;
+      left: 2px;
+    }
+    ul {
+      margin: 0 0;
+      padding: 0 0 0 7px;
+      list-style: none;
+      li {
+        position: relative;
+        padding-left: 15px;
+        &:before {
+          content:"";
+          display: block;
+          width: 6px;
+          height: 6px;
+          border-radius: 100px;
+          border: 1px solid $color1;
+          position: absolute;
+          top: 10px;
+          left: 2px;
+        }
+      }
+    }
+  }
+}
+.page404 {
+  .entry-title {
+    .small-title {
+      position: relative;
+      top: 5px;
+    }
+  }
+  #sitemap-wrap {
+    margin-top: 40px;
+  }
+}
+
 /* FOOTER */
 .site-footer {
   background: #000;

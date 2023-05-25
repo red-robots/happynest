@@ -1465,6 +1465,18 @@ body{font-family:"Proxima Nova",sans-serif;font-size:17px;line-height:1.4}
 .section ul{margin:0;padding:0 0 0 20px;list-style:none}
 .section ul li{position:relative;padding-left:15px}
 .section ul li:before{content:"";display:block;width:5px;height:5px;border-radius:100px;background:#00b0fa;position:absolute;top:7px;left:2px}
+.sitemap .titlediv{margin-bottom:40px}
+#sitemap-wrap{max-width:900px;width:100%}
+#sitemap-wrap ul.menu{margin:0;padding:0 0 0 15px;list-style:none;-webkit-column-count:2;-moz-column-count:2;column-count:2}
+#sitemap-wrap ul.menu a{display:inline-block;font-size:1.15em;text-decoration:none;color:#000}
+#sitemap-wrap ul.menu a:hover{color:#00b0fa}
+#sitemap-wrap ul.menu>li{margin:5px 0;position:relative;padding-left:15px;-webkit-column-break-inside:avoid;-moz-column-break-inside:avoid;break-inside:avoid}
+#sitemap-wrap ul.menu>li:before{content:"";display:block;width:5px;height:5px;border-radius:100px;background:#00b0fa;position:absolute;top:10px;left:2px}
+#sitemap-wrap ul.menu>li ul{margin:0;padding:0 0 0 7px;list-style:none}
+#sitemap-wrap ul.menu>li ul li{position:relative;padding-left:15px}
+#sitemap-wrap ul.menu>li ul li:before{content:"";display:block;width:6px;height:6px;border-radius:100px;border:1px solid #00b0fa;position:absolute;top:10px;left:2px}
+.page404 .entry-title .small-title{position:relative;top:5px}
+.page404 #sitemap-wrap{margin-top:40px}
 .site-footer{background:#000;color:#fff;border-top:2px solid #fff;padding-top:50px;padding-bottom:50px}
 .site-footer .flexwrap{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;margin-left:-20px;margin-right:-20px}
 .site-footer .footLogo{margin:0}
