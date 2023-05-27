@@ -875,6 +875,74 @@ body.home {
   }
 }
 
+.gform_wrapper.gravity-theme {
+  margin-top: 30px;
+  legend,
+  label.gfield_label {
+    display: block;
+    text-align: left;
+    margin-bottom: 2px!important;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  textarea, select {
+    border: 1px solid #000;
+    border-radius: 4px;
+    padding: 5px;
+    outline: none;
+    font-size: 18px!important;
+    &:focus {
+      border-color: $color1;
+    }
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  select {
+    height: 45px;
+  }
+  .ginput_container {
+    p {
+      margin: 0 0;
+      br {
+        display: none;
+      }
+    }
+    &.ginput_container--name {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      p {
+        width: 48.5%;
+        label {
+          font-size: 13px;
+          line-height: 1;
+          letter-spacing: 0.02em;
+          margin: 0 0;
+        }
+      }
+    }
+  }
+  .gform_footer {
+    display: block!important;
+    text-align: left;
+    padding-top: 0!important;
+    br {
+      display: none;
+    }
+    p {
+      margin: 0 0!important;
+      height: 0;
+      overflow: hidden;
+    }
+    input {
+      border: none;
+      padding: 12px 35px 10px!important;
+    }
+  }
+}
+
 /* FOOTER */
 .site-footer {
   background: #000;

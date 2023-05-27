@@ -1482,6 +1482,20 @@ body.home .intro .wrapper{max-width:1200px}
 #sitemap-wrap ul.menu>li ul li:before{content:"";display:block;width:6px;height:6px;border-radius:100px;border:1px solid #00b0fa;position:absolute;top:10px;left:2px}
 .page404 .entry-title .small-title{position:relative;top:5px}
 .page404 #sitemap-wrap{margin-top:40px}
+.gform_wrapper.gravity-theme{margin-top:30px}
+.gform_wrapper.gravity-theme legend,.gform_wrapper.gravity-theme label.gfield_label{display:block;text-align:left;margin-bottom:2px !important}
+.gform_wrapper.gravity-theme input[type=text],.gform_wrapper.gravity-theme input[type=email],.gform_wrapper.gravity-theme input[type=number],.gform_wrapper.gravity-theme textarea,.gform_wrapper.gravity-theme select{border:1px solid #000;border-radius:4px;padding:5px;outline:0;font-size:18px !important}
+.gform_wrapper.gravity-theme input[type=text]:focus,.gform_wrapper.gravity-theme input[type=email]:focus,.gform_wrapper.gravity-theme input[type=number]:focus,.gform_wrapper.gravity-theme textarea:focus,.gform_wrapper.gravity-theme select:focus{border-color:#00b0fa}
+.gform_wrapper.gravity-theme input[type=text],.gform_wrapper.gravity-theme input[type=email],.gform_wrapper.gravity-theme input[type=number],.gform_wrapper.gravity-theme select{height:45px}
+.gform_wrapper.gravity-theme .ginput_container p{margin:0}
+.gform_wrapper.gravity-theme .ginput_container p br{display:none}
+.gform_wrapper.gravity-theme .ginput_container.ginput_container--name{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between}
+.gform_wrapper.gravity-theme .ginput_container.ginput_container--name p{width:48.5%}
+.gform_wrapper.gravity-theme .ginput_container.ginput_container--name p label{font-size:13px;line-height:1;letter-spacing:.02em;margin:0}
+.gform_wrapper.gravity-theme .gform_footer{display:block !important;text-align:left;padding-top:0 !important}
+.gform_wrapper.gravity-theme .gform_footer br{display:none}
+.gform_wrapper.gravity-theme .gform_footer p{margin:0 0 !important;height:0;overflow:hidden}
+.gform_wrapper.gravity-theme .gform_footer input{border:0;padding:12px 35px 10px !important}
 .site-footer{background:#000;color:#fff;border-top:2px solid #fff;padding-top:50px;padding-bottom:50px}
 .site-footer .flexwrap{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;margin-left:-20px;margin-right:-20px}
 .site-footer .footLogo{margin:0}
