@@ -148,7 +148,7 @@ get_header();
   $section3_stats = get_field('section3_stats');
   if($section3_title || $section3_stats) { ?>
   <section class="section section-3">
-    <div class="wrapper fadeInUp wow">
+    <div class="wrapper animate-this" data-effect="fadeInUp">
       <?php if ($section3_title) { ?>
         <h2 class="stitle"><?php echo $section3_title ?></h2>
       <?php } ?>
@@ -159,7 +159,7 @@ get_header();
             
             <?php if ( $s['percent'] ) { ?>
             <div class="stat">
-              <span class="percent"><?php echo $s['percent'] ?></span>
+              <span class="percent"><b><?php echo $s['percent'] ?></b></span>
               <?php if ( $s['title'] ) { ?>
               <span class="title"><?php echo $s['title'] ?></span>
               <?php } ?>
@@ -184,7 +184,7 @@ get_header();
     <div class="wrapper-fullwidth">
       <div class="flexwrap">
         <?php if ($section4_content) { ?>
-        <div class="fcol textcol fadeInLeft wow">
+        <div class="fcol textcol animate-this" data-effect="fadeInLeft">
           <div class="inner">
             <div class="text"><?php echo anti_email_spam($section4_content) ?></div>
           </div>
@@ -192,7 +192,7 @@ get_header();
         <?php } ?>
 
         <?php if ($section4_image) { ?>
-        <figure class="fcol imagecol fadeInRight wow" style="background-image:url('<?php echo $section4_image['url'] ?>')">
+        <figure class="fcol imagecol animate-this" data-effect="fadeInUp" style="background-image:url('<?php echo $section4_image['url'] ?>')">
         </figure>  
         <?php } ?>
       </div>

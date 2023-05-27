@@ -162,16 +162,16 @@ add_action( 'init', 'my_theme_add_editor_styles' );
 /*-------------------------------------
   Change Admin Labels
 ---------------------------------------*/
-function change_post_menu_label() {
-    global $menu;
-    global $submenu;
-    $menu[5][0] = 'Stories';
-    $submenu['edit.php'][5][0] = 'Stories';
-    $submenu['edit.php'][10][0] = 'Add Story';
-    //$submenu['edit.php'][15][0] = 'Status'; // Change name for categories
-    //$submenu['edit.php'][16][0] = 'Labels'; // Change name for tags
-    echo '';
-}
+// function change_post_menu_label() {
+//     global $menu;
+//     global $submenu;
+//     $menu[5][0] = 'Stories';
+//     $submenu['edit.php'][5][0] = 'Stories';
+//     $submenu['edit.php'][10][0] = 'Add Story';
+//     //$submenu['edit.php'][15][0] = 'Status'; // Change name for categories
+//     //$submenu['edit.php'][16][0] = 'Labels'; // Change name for tags
+//     echo '';
+// }
 
 // function change_post_object_label() {
 //         global $wp_post_types;

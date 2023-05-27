@@ -491,6 +491,7 @@ body.home {
   background: #000;
   padding-top: 80px;
   padding-bottom: 80px;
+  overflow: hidden;
   .stitle {
     font-size: 50px;
     font-weight: 500;
@@ -514,15 +515,45 @@ body.home {
         color: #FFF;
       }
       .percent {
-        border: 1px solid $color1;
+        // border: 1px solid $color1;
         border-radius: 15px;
-        padding: 12px 15px 10px;
         font-size: 30px;
         font-weight: 500;
         line-height: 1;
         margin-bottom: 10px;
         min-width: 150px;
         text-align: center;
+        padding: 1px;
+        background: $color1;
+        overflow: hidden;
+        // background: conic-gradient(from 45deg at 50% 50%, #000000, #31bcf4, rgba(0,178,255,1));
+        // background-position: top right;
+        // background-size: 500%;
+        // transition: all ease-out 0.3s;
+        position: relative;
+        &:before {
+          content: "";
+          display: block;
+          width: 30%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: #c3fbfe;
+          transform: skew(290deg,10deg);
+          transition: transform ease  0.5s;
+          transition-delay: 0.2s;
+          animation-duration: 1s;
+          animation-fill-mode: both;
+        }
+        b {
+          display: block;
+          padding: 12px 15px 10px;
+          background: #000;
+          border-radius: 15px;
+          position: relative;
+          z-index: 2;
+        }
       }
       .title {
         font-size: 16px;
@@ -533,6 +564,7 @@ body.home {
 }
 
 .section-4 {
+  overflow: hidden;
   @include greenBlueGradient();
   .fcol {
     width: 100%;
@@ -1729,6 +1761,10 @@ body.subpage {
 
 .animate-this {
   transition: all ease  1s;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
   &[data-effect="fadeInUp"] {
     opacity: 0;
     transform: translate3d(0, 100%, 0);
@@ -1743,18 +1779,33 @@ body.subpage {
   &.start {
     &[data-effect="fadeInUp"] {
       opacity: 1;
-      transform: translate3d(0, 0, 0);
+      animation-name: fadeInUp;
+    }
+    &[data-effect="fadeInLeft"] {
+      animation-name: fadeInLeft;
     }
     &[data-effect="fadeInRight"] {
       opacity: 1;
-      transform: translate3d(0, 0, 0);
+      animation-name: fadeInRight;
     }
     &[data-effect="slowUp"] {
       transform: translateY(0);
     }
   }
 }
-
+.section-3 {
+  .animate-this.start {
+    .status .stat .percent {
+      &:before {
+        transform: skew(57deg,33deg);
+        transition-delay: 0.5s;
+      }
+    }
+  }
+}
+.section-4 .imagecol {
+  animation-duration: 0.2s!important;
+}
 @keyframes animateUpDown {
   0%, 100% {
     transform: translateY(0);
@@ -1764,4 +1815,14 @@ body.subpage {
   }
 }
 
+@keyframes borderSpotLight {
+  from {
+    opacity: 1;
+    transform: skew(20deg, 10deg);
+  }
+  to {
+    opacity: 0;
+    transform: skew(263deg, 10deg);
+  }
+}
 

@@ -17,7 +17,7 @@
 
       <div class="steps-wrapper">
       <?php if ($content_steps) { ?>
-        <div class="steps fadeInUp wow">
+        <div class="steps">
           <div class="flexwrap">
           <?php $ctr=1; foreach ($content_steps as $s) { 
               $item = $s['title_link'];
@@ -35,7 +35,7 @@
               }
             ?>
             <?php if ($itemText) { ?>
-            <div class="step" data-counter="<?php echo $ctr; ?>">
+            <div class="step animate-this" data-effect="fadeInUp" data-counter="<?php echo $ctr; ?>" style="animation-delay:0.<?php echo $ctr?>s">
               <?php echo $link_start; ?>
               <?php if ($s['icon_img']) { ?>
                <div class="icondiv">
@@ -60,8 +60,8 @@
 
 
       <?php if ($feat_image) { ?>
-      <figure class="imageblock fadeIn wow">
-        <img src="<?php echo $feat_image['url'] ?>" alt="<?php echo $feat_image['title'] ?>" />
+      <figure class="imageblock phoneImage">
+        <img src="<?php echo $feat_image['url'] ?>" alt="<?php echo $feat_image['title'] ?>" class="animate-this" data-effect="fadeInRight"/>
       </figure>
       <?php } ?>
 
