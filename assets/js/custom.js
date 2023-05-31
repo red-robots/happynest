@@ -101,5 +101,9 @@ jQuery(document).ready(function ($) {
 
   if ($('#gform_1').length) {
     $('<a href="javascript:void(0)" class="custom-submit-button" aria-label="Submit"><span></span></a>').appendTo('#gform_1 .ginput_container_phone');
+    $(document).on('click', '#gform_1 .custom-submit-button', function (e) {
+      e.preventDefault();
+      $('#gform_1 .gform_button').trigger('click');
+    });
   }
 });
