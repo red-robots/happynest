@@ -165,4 +165,19 @@ function customscript_admin_head() { ?>
 
 
 
-
+add_shortcode('apps_button', 'apps_button_shortcode_func');
+function apps_button_shortcode_func($atts) {
+    $appstore_link = get_field('appstore_link','option');
+    $googleplay_link = get_field('googleplay_link','option');
+    $buttons = '';
+    ob_start();
+    if( $appstore_link || $googleplay_link ) { ?>
+    <div class="apps-button">
+        <?php if($appstore_link) { ?><a href="<?php echo $appstore_link ?>" target="_blank" class="appBtn apple"><span class="sr-only">Apple Store</span></a><?php } ?>
+        <?php if($googleplay_link) { ?><a href="<?php echo $googleplay_link ?>" target="_blank" class="appBtn google"><span class="sr-only">Google Play Store</span></a><?php } ?>
+    </div>
+    <?php }
+    $buttons = ob_get_contents();
+    ob_end_clean();
+    return $buttons;
+}

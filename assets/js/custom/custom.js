@@ -105,6 +105,9 @@ jQuery(document).ready(function ($) {
 
 
 
-
+  /* Gravity Form / Downloads page */
+  if( $('#gform_1').length ) {
+    $('<a href="javascript:void(0)" class="custom-submit-button" aria-label="Submit"><span></span></a>').appendTo('#gform_1 .ginput_container_phone');
+  }
   
 }); 
