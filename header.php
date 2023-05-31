@@ -40,6 +40,12 @@ var params={};location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(s,k,v){
 
 <?php wp_head(); ?>
 </head>
+<?php
+$headerCTA = get_field('header_cta_button','option'); 
+$hctaTarget = (isset($headerCTA['target']) && $headerCTA['target']) ? $headerCTA['target'] : "_self";
+$hctaText = (isset($headerCTA['title']) && $headerCTA['title']) ? $headerCTA['title'] : "";
+$hctaLink = (isset($headerCTA['url']) && $headerCTA['url']) ? $headerCTA['url'] : "";
+?>
 <body <?php body_class(); ?>>
 <div id="page" class="site cf">
 	<div id="overlay"></div>
@@ -55,7 +61,9 @@ var params={};location.search.replace(/[?&]+([^=&]+)=([^&]*)/gi,function(s,k,v){
 
         <nav id="site-navigation" class="main-navigation" role="navigation">
           <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu','container_class'=>'menu-wrapper') ); ?>
-          <a href="#" class="topCta button getStarted">Get Started</a>
+          <?php if( $hctaText &&  $hctaLink ) { ?>
+          <a href="<?php echo $hctaLink ?>" target="<?php echo $hctaTarget ?>" class="topCta button getStarted"><?php echo $hctaText ?></a>
+          <?php } ?>
         </nav><!-- #site-navigation -->
 
         <span id="menu-toggle" class="menu-toggle" aria-label="Menu Toggle"><span class="sr">Menu</span><span class="bar"></span></span>

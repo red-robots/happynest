@@ -19,7 +19,7 @@ get_header();
       $iconText = (isset($title['title']) && $title['title']) ? $title['title'] : "";
       $iconLink = (isset($title['url']) && $title['url']) ? $title['url'] : "";
       $hasLink = ($iconLink && $iconLink!="#") ? true : false;
-      ?>
+    ?>
       <div class="link-icon <?php echo ($hasLink) ? 'hasLink':'noLink' ?>">
         <?php if ($hasLink) { ?>
         <a href="<?php echo $iconLink ?>" target="<?php echo $iconTarget ?>" class="iconInner">
