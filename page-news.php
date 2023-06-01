@@ -7,7 +7,7 @@ $hasBanner = ( isset($bannerImage['image1']) && $bannerImage['image1'] ) ? 'hasB
 get_header(); 
 ?>
 
-<div id="primary" class="content-area-full internalPage generic-layout <?php echo $hasBanner ?>">
+<div id="primary" class="content-area-full internalPage news-page <?php echo $hasBanner ?>">
   <main id="main-content" class="main-content">
   <?php while ( have_posts() ) : the_post(); ?>
       <?php if ($hasBanner=="noBanner") { ?>
@@ -21,10 +21,9 @@ get_header();
       <?php } ?>
 
       <?php  
-        $intro_icon = get_field('intro_icon');
-        $intro_text = get_field('intro_text');
-      ?>
-
+      $intro_icon = get_field('intro_icon');
+      $intro_text = get_field('intro_text');
+      if($intro_text) { ?>
       <section class="section section-intro">
         <div class="wrapper">
           <?php if ($intro_icon) { ?>
@@ -35,10 +34,14 @@ get_header();
           <?php if ($intro_text) { ?><div class="intro-text"><?php echo anti_email_spam($intro_text) ?></div><?php } ?>
         </div>
       </section>
+      <?php } ?>  
   <?php endwhile; ?>
 
 
-  <?php get_template_part('parts/news-featured'); ?>
+  <?php 
+  include( locate_template('parts/news-featured.php') ); 
+  include( locate_template('parts/news-feeds.php') ); 
+  ?>
 
   </main>
 </div><!-- #primary -->
