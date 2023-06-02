@@ -106,4 +106,66 @@ jQuery(document).ready(function ($) {
       $('#gform_1 .gform_button').trigger('click');
     });
   }
+  /* Load More */
+
+
+  $(document).on('click', '.loadmore-button', function (e) {
+    e.preventDefault();
+    var baseURL = $(this).data('baseurl');
+    var totalPages = $(this).data('total-pages');
+    var nextpage = $(this).data('nextpage');
+    var nextPageUrl = baseURL + '?pg=' + nextpage;
+
+    if (nextpage == totalPages) {
+      $('.morediv').remove();
+    }
+
+    $('.hidden-container').load(nextPageUrl + ' .recent-posts-inner', function () {
+      if ($('.hidden-container .postInfo').length) {
+        $('.hidden-container .postInfo').each(function () {
+          $(this).appendTo('.recent-posts-content .recent-posts-inner');
+        });
+        $('.morediv').load(nextPageUrl + ' .loadmore-button', function () {});
+      }
+    });
+  });
+  $('#filterPosts select[name="term"]').on('change', function () {
+    getFilterPostsResult();
+  });
+  $('#filterPosts input[name="src"]').on('keypress', function (e) {
+    if (e.which == 13) {
+      getFilterPostsResult();
+    }
+  });
+  $('#filterPosts').on('submit', function (e) {
+    e.preventDefault();
+  });
+
+  function getFilterPostsResult() {
+    var form = $('#filterPosts');
+    var action = form.attr('action');
+    var options = form.serialize();
+    var baseURL = action + '?' + options;
+    $('.hidden-container').load(baseURL + ' .recent-posts-inner', function () {
+      if ($('.hidden-container .postInfo').length) {
+        $('.recent-posts-content .recent-posts-inner').html("");
+        $('.hidden-container .postInfo').each(function () {
+          $(this).appendTo('.recent-posts-content .recent-posts-inner');
+        });
+        $('.morediv').load(baseURL + ' .loadmore-button', function () {});
+      }
+
+      $('.filter-form-reset').show();
+    });
+  }
+
+  $(".modern-select").select2({
+    placeholder: "Filter...",
+    allowClear: true
+  });
+  $('#filterPosts .reset-button').on('click', function (e) {
+    e.preventDefault();
+    $('.input-group [name="src"]').val("");
+    $(".modern-select").val('').trigger('change');
+  });
 });
