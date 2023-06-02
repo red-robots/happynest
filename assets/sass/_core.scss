@@ -1358,12 +1358,18 @@ body.home {
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    @include max($tabwidth) {
+      flex-wrap: wrap;
+    }
   }
   .input-group {
     max-width: 300px;
     width: 100%;
     padding: 10px;
     position: relative;
+    @include max($tabwidth) {
+      max-width: 100%;
+    }
     select, input {
       width: 100%;
       border-radius: 100px;

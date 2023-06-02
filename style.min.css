@@ -1834,7 +1834,9 @@ body.home .intro .wrapper .textcol{padding-right:15vw}
 .recents-posts-block .recent-posts-inner .postInfo{padding:30px}
 }@media screen and (max-width:980px){.site-header .head-inner{padding-left:20px;padding-right:20px}
 .main-navigation ul.menu>li>a{padding:30px 15px}
-}@media screen and (max-width:880px){.site-header{height:60px}
+}@media screen and (max-width:880px){.filter-form form{-ms-flex-wrap:wrap;flex-wrap:wrap}
+.filter-form .input-group{max-width:100%}
+.site-header{height:60px}
 .site-header .wrapper,.site-header .head-inner{height:100%;position:relative}
 .site-header .head-inner{padding-left:0;padding-right:0}
 .site-header .site-logo{position:absolute;top:0;left:5px;width:170px;height:100%;display:-webkit-inline-box;display:-ms-inline-flexbox;display:inline-flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
