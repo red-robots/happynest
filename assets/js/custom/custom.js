@@ -122,6 +122,16 @@ jQuery(document).ready(function ($) {
     var totalPages = $(this).data('total-pages');
     var nextpage = $(this).data('nextpage');
     var nextPageUrl = baseURL + '?pg=' + nextpage;
+    
+    /* Check if there's filter */
+    var form = $('#filterPosts');
+    var formAction = form.attr('action');
+    var formOptions = form.serialize();
+    if(formOptions) {
+      nextPageUrl += '&' + formOptions;
+    }
+
+    
     if(nextpage==totalPages) {
       $('.morediv').remove();
     }
