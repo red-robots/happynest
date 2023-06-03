@@ -1726,8 +1726,6 @@ body.subpage #content{padding-top:50px;padding-bottom:0;min-height:25em}
 body.subpage h1,body.subpage h2,body.subpage h3,body.subpage h4,body.subpage h5,body.subpage h6{color:#00b0fa}
 body.subpage h2{margin-top:1em;margin-bottom:.3em}
 body.subpage #main{font-size:16px}
-body.subpage #main ol>li{padding-left:5px}
-body.subpage #main ol>li:before{content:") ";display:inline-block;position:relative;left:-8px}
 body.subpage #main ol>li:before,body.subpage #main ol>li::marker{color:#00b0fa;font-size:15px}
 .section1{padding-top:30px;padding-bottom:60px}
 .section1 .topIcon{margin:0 0 20px;text-align:center}
