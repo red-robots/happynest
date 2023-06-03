@@ -128,7 +128,7 @@ if ( $posts->have_posts() ) {
                 <?php } ?>
                 <span class="post-date"><?php echo $post_date_text ?></span>
               </div>
-              <h3 class="postTitle"><a href="<?php echo get_permalink(); ?>"><?php echo $postTitle?></a></h3>
+              <h3 class="postTitle"><a href="<?php echo get_permalink($postId); ?>"><?php echo $postTitle?></a></h3>
               <?php if($content) { ?>
               <div class="text">
                 <?php echo shortenText( strip_tags($content), 150, ' ', '...'); ?>
