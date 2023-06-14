@@ -1704,7 +1704,7 @@ body.news .select2-dropdown{background-color:#00b0fa !important;border-radius:15
 body.news .select2-results__option{padding:6px 15px}
 body.news .select2-search--dropdown{padding:12px 15px 10px 15px}
 body.news .select2-search--dropdown .select2-search__field{border-radius:100px;border:1px solid #000}
-.site-footer{background:#000;color:#fff;border-top:2px solid #fff;padding-top:50px;padding-bottom:50px}
+.site-footer{background:#000;color:#fff;padding-top:50px;padding-bottom:50px}
 .site-footer .flexwrap{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;margin-left:-20px;margin-right:-20px}
 .site-footer .footLogo{margin:0}
 .site-footer .footLogo img{width:200px;height:auto}
