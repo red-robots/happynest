@@ -1504,8 +1504,8 @@ body.home .intro .wrapper{max-width:1200px}
 .columns-wrapper{padding-bottom:60px}
 .columns-wrapper .flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap}
 .columns-wrapper .fcol{width:100%;padding:15px}
-.columns-wrapper .fcol .inner{padding:30px;border-radius:20px;color:#000;height:100%;background:#00ffb3;background:-webkit-gradient(linear,left top,right top,from(#00ffb3),to(#00b0fa));background:linear-gradient(to right,#00ffb3 0,#00b0fa 100%);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#00ffb3",endColorstr="#00b0fa",GradientType=1)}
-.columns-wrapper .fcol h3{font-size:30px;font-weight:500;line-height:1.2;margin:0 0 10px;text-align:center}
+.columns-wrapper .fcol .inner{padding:30px;border-radius:30px;color:#fff;height:100%;border:1px solid #00b0fa}
+.columns-wrapper .fcol h3{font-size:30px;font-weight:500;line-height:1.2;margin:0 0 10px;text-align:center;color:#00b0fa}
 .columns-wrapper .buttondiv{margin-top:50px;text-align:center}
 .section h2{font-size:50px;font-weight:500;line-height:1.1}
 .section-1.columns-wrapper{background:#000;padding-bottom:80px;font-size:1.3em;line-height:1.3}

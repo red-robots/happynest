@@ -375,10 +375,11 @@ body.home {
     }
     .inner {
       padding: 30px;
-      border-radius: 20px;
-      color: #000;
+      border-radius: 30px;
+      color: #FFF;
       height: 100%;
-      @include greenBlueGradient();
+      border: 1px solid $color1;
+      // @include greenBlueGradient();
     }
     h3 {
       font-size: 30px;
@@ -386,6 +387,7 @@ body.home {
       line-height: 1.2;
       margin: 0 0 10px;
       text-align: center;
+      color: $color1;
     }
   }
 
